@@ -51,15 +51,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\CameraController.cs" />
-     <Compile Include="Assets\Scripts\MainMenu.cs" />
-     <Compile Include="Assets\Scripts\PauseMenu.cs" />
-     <Compile Include="Assets\Scripts\PlayerController.cs" />
- <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/khols/Desktop/Classes/CSCC classes/3D graphics game engines/assignment 6/Assignment-6/UnityProject/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
- </Reference>
+     <Compile Include="Assets\Scripts\Kevin&apos;s Scripts\CameraControl.cs" />
+     <Compile Include="Assets\Scripts\Kevin&apos;s Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Old Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Old Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\Old Scripts\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\Old Scripts\PlayerControl.cs" />
  <Reference Include="Unity.PackageManagerUI.Editor">
  <HintPath>C:/Users/khols/Desktop/Classes/CSCC classes/3D graphics game engines/assignment 6/Assignment-6/UnityProject/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.StandardEvents">
+ <HintPath>C:/Users/khols/Desktop/Classes/CSCC classes/3D graphics game engines/assignment 6/Assignment-6/UnityProject/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -235,6 +237,9 @@
  <Reference Include="Unity.Locator">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Unity.Locator.dll</HintPath>
  </Reference>
+ <Reference Include="Facebook.Unity.Settings">
+ <HintPath>C:/Users/khols/Desktop/Classes/CSCC classes/3D graphics game engines/assignment 6/Assignment-6/UnityProject/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -267,9 +272,6 @@
  </Reference>
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>C:/Users/khols/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
- </Reference>
- <Reference Include="Facebook.Unity.Settings">
- <HintPath>C:/Users/khols/Desktop/Classes/CSCC classes/3D graphics game engines/assignment 6/Assignment-6/UnityProject/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
