@@ -1,23 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
+using UnityEngine.UI;
 public class PlayerController : MonoBehaviour {
 
     public float speed;
-
     public Rigidbody rb;
     public GameObject[] CPlist;
     public int playerNumber = 0;
 
     private Vector3 Checkpointpos;
+    [HideInInspector]
+    public bool Finish;
 
-    private bool Finish;
+    public Text DebugText;
+
+    public LapTimeManager LTM;
 
     void Awake () 
 	{
-		Debug.Log(playerNumber+1);
-        Debug.Log("Race Begin");
+        LTM.PlayerCount += 1;
+        DebugText.text = "Race Begin";
         Checkpointpos = transform.position;
         Finish = false;
 	}
@@ -28,7 +31,7 @@ public class PlayerController : MonoBehaviour {
         PlayerHealth();
         if(Finish)
         {
-            Debug.Log("Finished Race");
+            DebugText.text = "Race Finished";
         }
     }
 
@@ -40,7 +43,6 @@ public class PlayerController : MonoBehaviour {
         Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
 
         rb.AddForce (movement * speed);
-        
     }
 
     void PlayerHealth()

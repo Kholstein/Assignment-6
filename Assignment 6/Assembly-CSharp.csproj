@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Andrews Scripts\LapTimeManager.cs" />
      <Compile Include="Assets\Scripts\Kevin&apos;s Scripts\CameraControl.cs" />
      <Compile Include="Assets\Scripts\Kevin&apos;s Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\Kevin&apos;s Scripts\PlayerController.cs" />
@@ -240,9 +241,6 @@
  </Reference>
  <Reference Include="Unity.Locator">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Unity.Locator.dll</HintPath>
- </Reference>
- <Reference Include="Facebook.Unity.Settings">
- <HintPath>C:/Users/khols/Desktop/Classes/CSCC classes/3D graphics game engines/assignment 6/Assignment-6/Assignment 6/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
