@@ -54,15 +54,18 @@
      <Compile Include="Assets\Scripts\Kevin&apos;s Scripts\CameraControl.cs" />
      <Compile Include="Assets\Scripts\Kevin&apos;s Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\Kevin&apos;s Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Michaels Scripts\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Michaels Scripts\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Michaels Scripts\Scripts\playerSpawner.cs" />
      <Compile Include="Assets\Scripts\Old Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\Old Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Old Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\Old Scripts\PlayerControl.cs" />
- <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/khols/Desktop/Classes/CSCC classes/3D graphics game engines/assignment 6/Assignment-6/Assignment 6/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/khols/Desktop/Classes/CSCC classes/3D graphics game engines/assignment 6/Assignment-6/Assignment 6/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.PackageManagerUI.Editor">
+ <HintPath>C:/Users/khols/Desktop/Classes/CSCC classes/3D graphics game engines/assignment 6/Assignment-6/Assignment 6/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

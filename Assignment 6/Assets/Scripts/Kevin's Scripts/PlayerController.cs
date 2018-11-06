@@ -8,16 +8,19 @@ public class PlayerController : MonoBehaviour {
 
     public Rigidbody rb;
     public GameObject[] CPlist;
+    public int playerNumber = 0;
 
     private Vector3 Checkpointpos;
 
     private bool Finish;
 
-    void Start ()
-    {
+    void Awake () 
+	{
+		Debug.Log(playerNumber+1);
+        Debug.Log("Race Begin");
         Checkpointpos = transform.position;
         Finish = false;
-    }
+	}
 
     void Update ()
     {
