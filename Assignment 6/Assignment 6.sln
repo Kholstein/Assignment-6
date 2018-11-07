@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment 6", "Assembly-CSharp.csproj", "{E789201C-3A43-A65F-0DCA-A3F95AE46076}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{E789201C-3A43-A65F-0DCA-A3F95AE46076}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -675,8 +675,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397acbda535d855429828f871713cf5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PC: {fileID: 0}
-  CPlist: []
+  lapTimeText: {fileID: 0}
+  lapTime: 0
+  DebugText: {fileID: 0}
+  PlayerCount: 0
+  Players: []
 --- !u!1 &1087961328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1733,12 +1736,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1698200237}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee1af2cea353ce24a93cba1f4f8dc4d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 397acbda535d855429828f871713cf5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lapTimeText: {fileID: 1147265843}
   lapTime: 0
-  DebugText: {fileID: 749826255}
+  DebugText: {fileID: 2073710493}
   PlayerCount: 0
   Players:
   - {fileID: 827584914}

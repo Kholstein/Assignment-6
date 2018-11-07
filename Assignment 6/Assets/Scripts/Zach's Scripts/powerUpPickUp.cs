@@ -11,7 +11,7 @@ public class powerUpPickUp : MonoBehaviour
     private AudioSource soundOrigin; // What the sound is coming from.
     public AudioClip pickUpSound; // What sound plays when the powerup has been picked up.
 
-    public Text UI;
+//    public Text UI;
 
 
 
@@ -43,7 +43,7 @@ public class powerUpPickUp : MonoBehaviour
 
         yield return new WaitForSeconds(duration); // Wait for this long...
 
-        UI.text = "powerup expire";
+ //       UI.text = "powerup expire";
 
         gameObject.SetActive(false); // ... until deactivating the powerup
 

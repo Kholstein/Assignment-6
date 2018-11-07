@@ -13,14 +13,14 @@ public class PlayerController : MonoBehaviour {
     [HideInInspector]
     public bool Finish;
 
-    public Text DebugText;
+    //public Text DebugText;
 
-    public LapTimeManager LTM;
+    public GameController LTM;
 
     void Awake () 
 	{
         LTM.PlayerCount += 1;
-        DebugText.text = "Race Begin";
+        //DebugText.text = "Race Begin";
         Checkpointpos = transform.position;
         Finish = false;
 	}
@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour {
         PlayerHealth();
         if(Finish)
         {
-            DebugText.text = "Race Finished";
+            //DebugText.text = "Race Finished";
         }
     }
 
