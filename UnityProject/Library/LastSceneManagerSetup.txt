@@ -1,4 +1,10 @@
 sceneSetups:
-- path: Assets/Scenes/Debug-Andrew.unity
+- path: Assets/Scenes/MainMenu-Andrew.unity
   isLoaded: 1
   isActive: 1
+- path: Assets/Scenes/failureFactory.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Scenes/Debug-Andrew.unity
+  isLoaded: 0
+  isActive: 0
