@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Debug.unity
+- path: Assets/Scenes/failureFactory.unity
   isLoaded: 1
   isActive: 1
