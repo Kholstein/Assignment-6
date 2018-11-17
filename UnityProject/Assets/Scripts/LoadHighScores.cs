@@ -11,11 +11,12 @@ public class LoadHighScores : MonoBehaviour
     public Text[] lapTimeText;
     //public Text HighscoreText;
 
-	//public string HighscoreLevelName;
+    public string factoryLevel = "failureFactory";
+    public string quarryLevel = "Deaths Quarry";
 
     void Awake()
     {
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 10; i++)
         {
             playerNameText[i].GetComponent<Text>();
             lapTimeText[i].GetComponent<Text>();
@@ -26,19 +27,24 @@ public class LoadHighScores : MonoBehaviour
     public void OnClick()
 	{
         string currentLevel = level.name;
-        for (int i = 1; i <= 5; i++)
+        for (int i = 1; i <= 10; i++)
         {
-            //float lapTime = PlayerPrefs.GetFloat("BestLapTime_" + currentLevel + i.ToString());
-            //string lapTimeFormatted = FormatLapTime(lapTime);
-            //lapTimeText[(i - 1)].text = lapTimeFormatted;
+            if (i < 6)
+            {
+                float lapTime = PlayerPrefs.GetFloat("BestLapTime_" + factoryLevel + i.ToString());
+                string lapTimeFormatted = FormatLapTime(lapTime);
+                lapTimeText[(i - 1)].text = lapTimeFormatted;
 
-            //playerNameText[(i - 1)].text = PlayerPrefs.GetString("PlayerName_" + currentLevel + i.ToString());
+                playerNameText[(i - 1)].text = PlayerPrefs.GetString("PlayerName_" + factoryLevel + i.ToString());
+            }
+            else
+            {
+                float lapTime = PlayerPrefs.GetFloat("BestLapTime_" + quarryLevel + (i - 5).ToString());
+                string lapTimeFormatted = FormatLapTime(lapTime);
+                lapTimeText[(i - 1)].text = lapTimeFormatted;
 
-            float lapTime = PlayerPrefs.GetFloat("BestLapTime_" + "Debug-Andrew" + i.ToString());
-            string lapTimeFormatted = FormatLapTime(lapTime);
-            lapTimeText[(i - 1)].text = lapTimeFormatted;
-
-            playerNameText[(i - 1)].text = PlayerPrefs.GetString("PlayerName_" + "Debug-Andrew" + i.ToString());
+                playerNameText[(i - 1)].text = PlayerPrefs.GetString("PlayerName_" + quarryLevel + (i - 5).ToString());
+            }
         }
     }
 

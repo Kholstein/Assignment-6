@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E789201C-3A43-A65F-0DCA-A3F95AE46076}</ProjectGuid>
+    <ProjectGuid>{5B580621-09B4-68CB-B5F4-5B9DD210A60F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,14 +53,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Andrews Scripts\HighScoreList.cs" />
+     <Compile Include="Assets\Scripts\Andrews Scripts\LapTimeManager.cs" />
      <Compile Include="Assets\Scripts\animateScene.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\CreditsManager.cs" />
      <Compile Include="Assets\Scripts\HighScoreList.cs" />
      <Compile Include="Assets\Scripts\HighScoresManager.cs" />
+     <Compile Include="Assets\Scripts\Kevin&apos;s Scripts\CameraControl.cs" />
+     <Compile Include="Assets\Scripts\Kevin&apos;s Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\Kevin&apos;s Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\LapTimeManager.cs" />
      <Compile Include="Assets\Scripts\LoadHighScores.cs" />
      <Compile Include="Assets\Scripts\LoadScene.cs" />
+     <Compile Include="Assets\Scripts\Michaels Scripts\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Michaels Scripts\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Michaels Scripts\Scripts\playerSpawner.cs" />
+     <Compile Include="Assets\Scripts\Old Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Old Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\Old Scripts\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\Old Scripts\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\playerSpawner.cs" />
@@ -68,16 +80,16 @@
      <Compile Include="Assets\Scripts\Zach&apos;s Scripts\powerUpPickUp.cs" />
      <Compile Include="Assets\Scripts\Zach&apos;s Scripts\powerUps.cs" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>D:/Documents/CSCC/CSCI 2551/Week 11/LMM_MA/Assignment 6/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>D:/GitHub/Assignment-6/UnityProject/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/Documents/CSCC/CSCI 2551/Week 11/LMM_MA/Assignment 6/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>D:/GitHub/Assignment-6/UnityProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>D:/Documents/CSCC/CSCI 2551/Week 11/LMM_MA/Assignment 6/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>D:/GitHub/Assignment-6/UnityProject/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/Documents/CSCC/CSCI 2551/Week 11/LMM_MA/Assignment 6/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>D:/GitHub/Assignment-6/UnityProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

@@ -8,3 +8,6 @@ sceneSetups:
 - path: Assets/Scenes/Debug-Andrew.unity
   isLoaded: 0
   isActive: 0
+- path: Assets/Scenes/Deaths Quarry.unity
+  isLoaded: 0
+  isActive: 0
