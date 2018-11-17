@@ -5,13 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
-    guid: 4090af52208189149af7ef62b013d86e
+    guid: 6dfb4bbc5ed2b58488bc274227a50e0e
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/failureFactory.unity
+    guid: b3002fe6333a1d44e9987a48251fb607
+  - enabled: 1
+    path: Assets/Scenes/Deaths Quarry.unity
+    guid: b08dcbaf0704ce342b5b1691db34dce1
   - enabled: 1
     path: Assets/Scenes/Debug.unity
-    guid: 9bf6037bc02fdfe4c8cb25cbceda9aef
+    guid: a23956b352bb3704a96eb920402278f0
+  - enabled: 1
+    path: Assets/Scenes/sapphireSands.unity
+    guid: af9fc95aae7b6c74f8a4a90c4d49b627
   m_configObjects: {}
