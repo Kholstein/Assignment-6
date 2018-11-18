@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class playerSpawner : MonoBehaviour {
 	public GameObject player;
 	public Transform[] spawnPoints;
@@ -16,7 +16,6 @@ public class playerSpawner : MonoBehaviour {
 
 	//pause script variables
 	public static bool GameIsPaused = false;
-	public GameObject pauseMenuUI;
 
 	//public int setPlayerNumber;
 	// Use this for initialization
@@ -85,14 +84,14 @@ public class playerSpawner : MonoBehaviour {
 
 	public void Resume ()
 	{
-		pauseMenuUI.SetActive (false);
+		SceneManager.UnloadSceneAsync("PauseMenu");
 		Time.timeScale = 1f;
 		GameIsPaused = false;
 	}
 
 	public void Pause ()
 	{
-		pauseMenuUI.SetActive (true);
+		SceneManager.LoadScene("PauseMenu", LoadSceneMode.Additive);
 		Time.timeScale = 0f;
 		GameIsPaused = true;
 	}

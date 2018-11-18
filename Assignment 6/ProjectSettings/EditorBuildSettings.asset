@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/sapphireSands.unity
     guid: af9fc95aae7b6c74f8a4a90c4d49b627
+  - enabled: 1
+    path: Assets/Scenes/PauseMenu.unity
+    guid: ac02be6f9001d0d4db2990376f297346
   m_configObjects: {}
