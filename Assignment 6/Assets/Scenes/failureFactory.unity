@@ -172,6 +172,16 @@ Prefab:
       propertyPath: spawnPoints.Array.data[3]
       value: 
       objectReference: {fileID: 650609473}
+    - target: {fileID: 114747187535757090, guid: d85356e51fc87594cbffe7a3f2128d70,
+        type: 2}
+      propertyPath: playerCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114747187535757090, guid: d85356e51fc87594cbffe7a3f2128d70,
+        type: 2}
+      propertyPath: AC
+      value: 
+      objectReference: {fileID: 1541585224}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d85356e51fc87594cbffe7a3f2128d70, type: 2}
   m_IsPrefabAsset: 0
@@ -489,7 +499,7 @@ GameObject:
   - component: {fileID: 1101681228}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -737,6 +747,12 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d7bc729b477275140ad90a1d62317452, type: 3}
+--- !u!114 &1541585224 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114645302645040924, guid: d85356e51fc87594cbffe7a3f2128d70,
+    type: 2}
+  m_PrefabInternal: {fileID: 508536097}
+  m_Script: {fileID: 11500000, guid: 340d302847e626943b8702a82c1f6907, type: 3}
 --- !u!1 &1592507887 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1591142697086716, guid: 6db054c904f1ae743b22864aa7d9221c,

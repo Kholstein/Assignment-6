@@ -11,13 +11,8 @@ public class animateScene : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		//debug
-		if (PlayerController.finishNumber == 1) {
-			anim.SetTrigger ("finishRace");
-		}
-		if (PlayerController.finishNumber == 4) {
-			anim.SetTrigger ("finishRace");
-		}
+	public void Animation () 
+	{
+		anim.Play ("fadeToBlack");
 	}
 }

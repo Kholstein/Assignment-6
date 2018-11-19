@@ -83,9 +83,12 @@ public class PlayerController : MonoBehaviour {
 	public int finishCount = 1;
 	public static int finishNumber;
 
+	private playerSpawner PS;
+
 	void Awake()
 	{
 		CPlist = GameObject.FindGameObjectsWithTag ("Checkpoint");
+		PS = GameObject.Find("playerManager").GetComponent<playerSpawner>();
 	}
 	void Start ()
 	{
@@ -312,8 +315,10 @@ public class PlayerController : MonoBehaviour {
 			if (Vector3.Distance (transform.position, CPlist [i].transform.position) < 5) {
 				Checkpointpos = CPlist [i].transform.position;
 			}
-			if (Vector3.Distance (transform.position, CPlist [CPlist.Length - 1].transform.position) < 5) {
+			if (Vector3.Distance (transform.position, CPlist [CPlist.Length - 1].transform.position) < 5 & CurrentState != 2) {
 				Finish = true;
+				PS.Playersfinish -= 1;
+				CurrentState = 2;
 			}
 		}
 	}

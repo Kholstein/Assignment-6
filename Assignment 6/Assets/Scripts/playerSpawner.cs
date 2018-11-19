@@ -17,10 +17,23 @@ public class playerSpawner : MonoBehaviour {
 	//pause script variables
 	public static bool GameIsPaused = false;
 
+	public GameObject[] PlayerCount;
+
+	[HideInInspector]
+
+	public float Playersfinish;
+	[HideInInspector]
+	public float timer;
+
+	public animateScene AC;
+
 	//public int setPlayerNumber;
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		spawnPlayers ();
+		PlayerCount = GameObject.FindGameObjectsWithTag("Player");
+		Playersfinish = PlayerCount.Length;
 	}
 
 	void Update ()
@@ -36,6 +49,10 @@ public class playerSpawner : MonoBehaviour {
 				Pause();
 			}
 		}
+		if(Playersfinish == 0)
+		{
+			MenuReturn(5);
+		}
 	}
 
 	void spawnPlayers ()
@@ -49,6 +66,7 @@ public class playerSpawner : MonoBehaviour {
 				childCam.gameObject.tag = "camera1";
 				childCam.rect = new Rect (0.0f, 0.5f, 0.5f, 0.5f);
 			}
+			 
 			else if (i == 2) {
 				childCam.gameObject.tag = "camera2";
 				childCam.rect = new Rect (0.5f, 0.5f, 0.5f, 0.5f);
@@ -61,6 +79,7 @@ public class playerSpawner : MonoBehaviour {
 				childCam.gameObject.tag = "camera4";
 				childCam.rect = new Rect (0.5f, 0.0f, 0.5f, 0.5f);
 			}
+			
 		}
 	}
 
@@ -96,11 +115,15 @@ public class playerSpawner : MonoBehaviour {
 		GameIsPaused = true;
 	}
 
-	//	//SceneManager.LoadScene("LevelSelect");
-	//	public void MenuReturn ()
-	//	{
-	//		Debug.Log ("Retunring to Menu...");
-	//		SceneManager.LoadScene("MainMenu");
-	//
-	//	}
+	public void MenuReturn (float timermax)
+	{
+		Debug.Log ("Retunring to Menu...");
+		timer += Time.deltaTime;
+		AC.Animation();
+		if(timer > timermax)
+		{
+			
+			SceneManager.LoadScene("MainMenu");	
+		}
+	}
 }
