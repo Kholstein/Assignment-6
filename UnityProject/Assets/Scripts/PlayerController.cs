@@ -66,12 +66,14 @@ public class PlayerController : MonoBehaviour {
 	[HideInInspector]
 
 	//Finsih the game
-	//public bool Finish;
+	public bool Finish;
 
 	//detect race finish
 	public bool finishRace = false;
 	public int finishCount = 1;
 	public static int finishNumber;
+
+	public LapTimeManager LTM;
 
 	void Awake()
 	{
@@ -303,7 +305,8 @@ public class PlayerController : MonoBehaviour {
 				Checkpointpos = CPlist [i].transform.position;
 			}
 			if (Vector3.Distance (transform.position, CPlist [CPlist.Length - 1].transform.position) < 5) {
-				//Finish = true;
+				Finish = true;
+				LTM.lapComplete = true;
 			}
 		}
 	}
