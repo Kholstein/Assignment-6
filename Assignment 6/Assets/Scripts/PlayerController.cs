@@ -138,12 +138,16 @@ public class PlayerController : MonoBehaviour {
 					if (driftDelay < 1) {
 						speed = driftBoost;
 						driftDelay = 1;
-						rb.AddForce (-MoveVector * 300);
+						//rb.AddForce (-MoveVector * 300);
+						rb.drag = 1f;
+						rb.angularDrag = 1f;
 					}
 				} else {
 					//move player
 					Move ();
-					speed = 10f;
+					rb.drag = 0.5f;
+					rb.angularDrag = 0.5f;
+					speed = 15f;
 				}
 			}
 			if (playNumb == 2)

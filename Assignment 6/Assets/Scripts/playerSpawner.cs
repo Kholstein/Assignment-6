@@ -15,8 +15,18 @@ public class playerSpawner : MonoBehaviour {
 	public int playerCount = 4;
 
 	//pause script variables
-	public static bool GameIsPaused = false;
-	public GameObject pauseMenuUI;
+	//public static bool GameIsPaused = false;
+	//public GameObject pauseMenuUI;
+
+	//Specific Players Pause
+	public GameObject pauseMenuUI1;
+	public GameObject pauseMenuUI2;
+	public GameObject pauseMenuUI3;
+	public GameObject pauseMenuUI4;
+	public bool paused1 = false;
+	public bool paused2 = false;
+	public bool paused3 = false;
+	public bool paused4 = false;
 
 	//public int setPlayerNumber;
 	// Use this for initialization
@@ -26,16 +36,45 @@ public class playerSpawner : MonoBehaviour {
 
 	void Update ()
 	{
-		if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown("joystick button 7"))
+		if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown("joystick 1 button 7"))
 		{
-			if (GameIsPaused)
-			{
-				Resume();
+			if (paused1) {
+				paused1 = false;
+			} else {
+				paused1 = true;
 			}
-			else
-			{
-				Pause();
+		}
+		if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown("joystick 2 button 7"))
+		{
+			if (paused2) {
+				paused2 = false;
+			} else {
+				paused2 = true;
 			}
+		}
+		if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown("joystick 3 button 7"))
+		{
+			if (paused3) {
+				paused3 = false;
+			} else {
+				paused3 = true;
+			}
+		}
+		if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown("joystick 4 button 7"))
+		{
+			if (paused4) {
+				paused4 = false;
+			} else {
+				paused4 = true;
+			}
+		}
+		if (paused1 || paused2 || paused3 || paused4) 
+		{
+			Pause ();
+		}
+		else
+		{
+			Resume();
 		}
 	}
 
@@ -85,16 +124,37 @@ public class playerSpawner : MonoBehaviour {
 
 	public void Resume ()
 	{
-		pauseMenuUI.SetActive (false);
+		pauseMenuUI1.SetActive (false);
+		pauseMenuUI2.SetActive (false);
+		pauseMenuUI3.SetActive (false);
+		pauseMenuUI4.SetActive (false);
 		Time.timeScale = 1f;
-		GameIsPaused = false;
+		//GameIsPaused = false;
 	}
 
 	public void Pause ()
 	{
-		pauseMenuUI.SetActive (true);
+		if (paused1) {
+			pauseMenuUI1.SetActive (true);
+		} else if (!paused1) {
+			pauseMenuUI1.SetActive (false);
+		}
+		if (paused2) {
+			pauseMenuUI2.SetActive (true);
+		} else if (!paused2) {
+			pauseMenuUI2.SetActive (false);
+		}
+		if (paused3) {
+			pauseMenuUI3.SetActive (true);
+		} else if (!paused3) {
+			pauseMenuUI3.SetActive (false);
+		}
+		if (paused4) {
+			pauseMenuUI4.SetActive (true);
+		} else if (!paused4) {
+			pauseMenuUI4.SetActive (false);
+		}
 		Time.timeScale = 0f;
-		GameIsPaused = true;
 	}
 
 	//	//SceneManager.LoadScene("LevelSelect");

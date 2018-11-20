@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scenes\DebugTeleport.cs" />
      <Compile Include="Assets\Scripts\animateScene.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\CreditsManager.cs" />
@@ -60,7 +61,7 @@
      <Compile Include="Assets\Scripts\LapTimeManager.cs" />
      <Compile Include="Assets\Scripts\LoadHighScores.cs" />
      <Compile Include="Assets\Scripts\LoadScene.cs" />
-     <Compile Include="Assets\Scripts\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\mainMenuAnimation.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\playerSpawner.cs" />
      <Compile Include="Assets\Scripts\Zach&apos;s Scripts\powerUpList.cs" />
