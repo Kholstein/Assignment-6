@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerSpawner : MonoBehaviour {
 	public GameObject player;
@@ -13,10 +14,16 @@ public class playerSpawner : MonoBehaviour {
 	private int countCamNumber = 1;
 	private int setCamNumCount= 0;
 	public int playerCount = 4;
-
+	public GameObject[] PlayerCount;
 	//pause script variables
 	//public static bool GameIsPaused = false;
 	//public GameObject pauseMenuUI;
+
+	public float Playersfinish;
+	[HideInInspector]
+	public float timer;
+
+	public animateScene AC;
 
 	//Specific Players Pause
 	public GameObject pauseMenuUI1;
@@ -27,16 +34,23 @@ public class playerSpawner : MonoBehaviour {
 	public bool paused2 = false;
 	public bool paused3 = false;
 	public bool paused4 = false;
+	public bool additiveSceneLoaded = false;
 
 	//public int setPlayerNumber;
 	// Use this for initialization
 	void Start () {
 		spawnPlayers ();
+		PlayerCount = GameObject.FindGameObjectsWithTag("Player");
+		Playersfinish = PlayerCount.Length;
 	}
 
 	void Update ()
 	{
-		if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown("joystick 1 button 7"))
+		if(Playersfinish == 0)
+		{
+			MenuReturn(5);
+		}
+		if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown("joystick 1 button 7") || Input.GetKeyDown("joystick 1 button 9"))
 		{
 			if (paused1) {
 				paused1 = false;
@@ -68,6 +82,7 @@ public class playerSpawner : MonoBehaviour {
 				paused4 = true;
 			}
 		}
+
 		if (paused1 || paused2 || paused3 || paused4) 
 		{
 			Pause ();
@@ -86,19 +101,19 @@ public class playerSpawner : MonoBehaviour {
 			Camera childCam = spawnedChild.GetComponentInChildren<Camera> ();
 			countPlayer++;
 			if (i == 1) {
-				childCam.gameObject.tag = "camera1";
+				//childCam.gameObject.tag = "camera1";
 				childCam.rect = new Rect (0.0f, 0.5f, 0.5f, 0.5f);
 			}
 			else if (i == 2) {
-				childCam.gameObject.tag = "camera2";
+				//childCam.gameObject.tag = "camera2";
 				childCam.rect = new Rect (0.5f, 0.5f, 0.5f, 0.5f);
 			}
 			else if (i == 3) {
-				childCam.gameObject.tag = "camera3";
+				//childCam.gameObject.tag = "camera3";
 				childCam.rect = new Rect (0.0f, 0.0f, 0.5f, 0.5f);
 			}
 			else if (i == 4) {
-				childCam.gameObject.tag = "camera4";
+				//childCam.gameObject.tag = "camera4";
 				childCam.rect = new Rect (0.5f, 0.0f, 0.5f, 0.5f);
 			}
 		}
@@ -124,6 +139,10 @@ public class playerSpawner : MonoBehaviour {
 
 	public void Resume ()
 	{
+		if (additiveSceneLoaded) {
+			SceneManager.UnloadSceneAsync("PauseMenu");
+			additiveSceneLoaded = false;
+		}
 		pauseMenuUI1.SetActive (false);
 		pauseMenuUI2.SetActive (false);
 		pauseMenuUI3.SetActive (false);
@@ -134,12 +153,16 @@ public class playerSpawner : MonoBehaviour {
 
 	public void Pause ()
 	{
+		if (!additiveSceneLoaded) {
+			SceneManager.LoadScene("PauseMenu", LoadSceneMode.Additive);
+			additiveSceneLoaded = true;
+		}
 		if (paused1) {
 			pauseMenuUI1.SetActive (true);
 		} else if (!paused1) {
 			pauseMenuUI1.SetActive (false);
 		}
-		if (paused2) {
+		if (paused2) {		
 			pauseMenuUI2.SetActive (true);
 		} else if (!paused2) {
 			pauseMenuUI2.SetActive (false);
@@ -157,11 +180,15 @@ public class playerSpawner : MonoBehaviour {
 		Time.timeScale = 0f;
 	}
 
-	//	//SceneManager.LoadScene("LevelSelect");
-	//	public void MenuReturn ()
-	//	{
-	//		Debug.Log ("Retunring to Menu...");
-	//		SceneManager.LoadScene("MainMenu");
-	//
-	//	}
+	public void MenuReturn (float timermax)
+	{
+		Debug.Log ("Returning to Menu...");
+		timer += Time.deltaTime;
+		AC.Animation();
+		if(timer > timermax)
+		{
+
+			SceneManager.LoadScene("MainMenu");	
+		}
+	}
 }
