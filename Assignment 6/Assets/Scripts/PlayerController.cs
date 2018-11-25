@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
+	
 	public float bearBoosterDuration = 5f; // How long the bearBooster powerup lasts
 	public float playerHealth = 100f; // This is a placeholder for the player's health. Delete after a system has been created.
 
@@ -73,15 +74,17 @@ public class PlayerController : MonoBehaviour {
 	public GameObject[] CPlist;
 
 	private Vector3 Checkpointpos;
-	[HideInInspector]
+	//[HideInInspector]
 
-	//Finsih the game
-	public bool Finish;
+	//Finish the game
+	public bool Finish = false;
 
 	//detect race finish
 	public bool finishRace = false;
 	public int finishCount = 1;
 	public static int finishNumber;
+
+	public LapTimeManager LTM;
 
 	private playerSpawner PS;
 
@@ -118,7 +121,7 @@ public class PlayerController : MonoBehaviour {
 			//Camera playerCam = GetComponentInChildren<Camera> ();
 		}
 		if (finishNumber == 4) {
-			Invoke ("setNextScene", 5);
+			//Invoke ("setNextScene", 5);
 			//setNextScene ();
 		}
 
@@ -151,12 +154,16 @@ public class PlayerController : MonoBehaviour {
 					if (driftDelay < 1) {
 						speed = driftBoost;
 						driftDelay = 1;
-						rb.AddForce (-MoveVector * 300);
+						//rb.AddForce (-MoveVector * 300);
+						rb.drag = 1f;
+						rb.angularDrag = 1f;
 					}
 				} else {
 					//move player
 					Move ();
-					speed = 10f;
+					rb.drag = 0.5f;
+					rb.angularDrag = 0.5f;
+					speed = 15f;
 				}
 			}
 			if (playNumb == 2)
@@ -166,12 +173,15 @@ public class PlayerController : MonoBehaviour {
 					if (driftDelay < 1) {
 						speed = driftBoost;
 						driftDelay = 1;
-						rb.AddForce (-MoveVector * 300);
+						rb.drag = 1f;
+						rb.angularDrag = 1f;
 					}
 				} else {
 					//move player
 					Move ();
-					speed = 10f;
+					rb.drag = 0.5f;
+					rb.angularDrag = 0.5f;
+					speed = 15f;
 				}
 			}
 			if (playNumb == 3)
@@ -181,12 +191,15 @@ public class PlayerController : MonoBehaviour {
 					if (driftDelay < 1) {
 						speed = driftBoost;
 						driftDelay = 1;
-						rb.AddForce (-MoveVector * 300);
+						rb.drag = 1f;
+						rb.angularDrag = 1f;
 					}
 				} else {
 					//move player
 					Move ();
-					speed = 10f;
+					rb.drag = 0.5f;
+					rb.angularDrag = 0.5f;
+					speed = 15f;
 				}
 			}
 			if (playNumb == 4)
@@ -196,12 +209,15 @@ public class PlayerController : MonoBehaviour {
 					if (driftDelay < 1) {
 						speed = driftBoost;
 						driftDelay = 1;
-						rb.AddForce (-MoveVector * 300);
+						rb.drag = 1f;
+						rb.angularDrag = 1f;
 					}
 				} else {
 					//move player
 					Move ();
-					speed = 10f;
+					rb.drag = 0.5f;
+					rb.angularDrag = 0.5f;
+					speed = 15f;
 				}
 			}
 		}
@@ -317,6 +333,7 @@ public class PlayerController : MonoBehaviour {
 			}
 			if (Vector3.Distance (transform.position, CPlist [CPlist.Length - 1].transform.position) < 5 & CurrentState != 2) {
 				Finish = true;
+				LTM.lapComplete = true;
 				PS.Playersfinish -= 1;
 				CurrentState = 2;
 			}
