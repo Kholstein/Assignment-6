@@ -83,6 +83,8 @@ public class PlayerController : MonoBehaviour {
 	public int finishCount = 1;
 	public static int finishNumber;
 
+	public float timer;
+
 	void Awake()
 	{
 		CPlist = GameObject.FindGameObjectsWithTag ("Checkpoint");
@@ -304,8 +306,17 @@ public class PlayerController : MonoBehaviour {
 
 	void PlayerHealth()
 	{
-		if (transform.position.y <= -10) {
-			transform.position = Checkpointpos;
+
+		if (transform.position.y <= -10) 
+		{
+			timer += Time.deltaTime;
+			CurrentState = 2;
+			if(timer > 5)
+			{
+				transform.position = Checkpointpos;
+				CurrentState = 1;
+				timer = 0;
+			}
 		}
 
 		for (int i = 0; i < CPlist.Length; i++) {
