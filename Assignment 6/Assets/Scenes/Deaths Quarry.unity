@@ -300,6 +300,11 @@ Prefab:
       propertyPath: spawnPoints.Array.data[3]
       value: 
       objectReference: {fileID: 1645379291}
+    - target: {fileID: 114747187535757090, guid: d85356e51fc87594cbffe7a3f2128d70,
+        type: 2}
+      propertyPath: playerCount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d85356e51fc87594cbffe7a3f2128d70, type: 2}
   m_IsPrefabAsset: 0
@@ -329,7 +334,7 @@ BoxCollider:
   m_GameObject: {fileID: 1253929149}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -382,10 +387,9 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1253929149}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.2820418, y: 0.5, z: 39.22729}
+  m_LocalPosition: {x: 2.2820418, y: 1.407, z: 39.22729}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1677264488}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -470,6 +474,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dab301cea7fe4cc4992bb25b954d79aa, type: 3}
+      propertyPath: m_TagString
+      value: Track
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: dab301cea7fe4cc4992bb25b954d79aa, type: 3}
+      propertyPath: m_TagString
+      value: Track
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dab301cea7fe4cc4992bb25b954d79aa, type: 3}
   m_IsPrefabAsset: 0
@@ -549,12 +561,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1677264487}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0000016689, y: -18.76, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -41.2, y: -18.26, z: 31}
   m_LocalScale: {x: 8.2232, y: 8.2232, z: 8.2232}
   m_Children: []
-  m_Father: {fileID: 1253929153}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1677264489
 MeshCollider:

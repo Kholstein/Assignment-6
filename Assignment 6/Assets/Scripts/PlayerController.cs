@@ -85,6 +85,9 @@ public class PlayerController : MonoBehaviour {
 
 	public float timer;
 
+	//public float health;
+	//when we implement a health system
+
 	void Awake()
 	{
 		CPlist = GameObject.FindGameObjectsWithTag ("Checkpoint");
@@ -279,6 +282,10 @@ public class PlayerController : MonoBehaviour {
 	void OnCollisionEnter (Collision col)
 	{
 		//if not already in a fail state
+		if (col.relativeVelocity.magnitude > 8 & col.gameObject.tag != "Track")
+		{
+			CurrentState = 2;
+		}
 		if (col.gameObject.name == "FailTrigger")
 		{
 			if (CurrentState == 1 && WinFail != -1) {
@@ -307,7 +314,7 @@ public class PlayerController : MonoBehaviour {
 	void PlayerHealth()
 	{
 
-		if (transform.position.y <= -10) 
+		if (CurrentState == 2) 
 		{
 			timer += Time.deltaTime;
 			CurrentState = 2;
