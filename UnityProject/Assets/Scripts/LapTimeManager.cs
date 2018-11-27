@@ -22,7 +22,9 @@ public class LapTimeManager : MonoBehaviour
     public Scene level;
 
     //public GameController gameController;
+    public GetPlayerName getPlayerName;
     public static string playerName;
+    public GameObject playerNameMenu;
     //public InputField input_name;
 
     string currentLevel;
@@ -47,6 +49,8 @@ public class LapTimeManager : MonoBehaviour
         oldName3 = PlayerPrefs.GetString("PlayerName_" + currentLevel + "3");
         oldName4 = PlayerPrefs.GetString("PlayerName_" + currentLevel + "4");
         oldName5 = PlayerPrefs.GetString("PlayerName_" + currentLevel + "5");
+
+        playerNameMenu.GetComponent<GameObject>();
     }
 
     void Update()
@@ -91,9 +95,9 @@ public class LapTimeManager : MonoBehaviour
                 {
                     //gameController.playerNameMenu.SetActive(true);
                     //playerName = input_name.GetComponent<InputField>().text;
-                    playerName = "Name";
-                    //                    gameController.highScoreMenu.SetActive(true);
-
+                    playerNameMenu.SetActive(true);
+                    playerName = getPlayerName.playerName;
+                    //playerName = "Name";
                     if (lapTime < oldTime4)
                     {
                         if (lapTime < oldTime3)
@@ -124,8 +128,12 @@ public class LapTimeManager : MonoBehaviour
                         ChangeHighScore5(lapTime, playerName);
                     }
 
-                    nameEntered = true;
+                    //nameEntered = true;
                 }
+            }
+            else
+            {
+                playerNameMenu.SetActive(false);
             }
         }
     }
