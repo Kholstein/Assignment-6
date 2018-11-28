@@ -17,7 +17,6 @@ public class powerUpPickUp : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.Find("");
         soundOrigin = GetComponent<AudioSource> ();
     }
     void OnTriggerEnter(Collider other) // When a plyer walks into the powerup...
