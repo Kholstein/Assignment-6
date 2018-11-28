@@ -74,16 +74,16 @@
      <Compile Include="Assets\Scripts\Zach&apos;s Scripts\powerUpPickUp.cs" />
      <Compile Include="Assets\Scripts\Zach&apos;s Scripts\powerUps.cs" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/Michael/Desktop/Working Folder/Assignment-6/Assignment 6/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/Michael/Documents/GitHub/Assignment-6/Assignment 6/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Michael/Desktop/Working Folder/Assignment-6/Assignment 6/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Michael/Documents/GitHub/Assignment-6/Assignment 6/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/Michael/Desktop/Working Folder/Assignment-6/Assignment 6/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/Michael/Documents/GitHub/Assignment-6/Assignment 6/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Michael/Desktop/Working Folder/Assignment-6/Assignment 6/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/Michael/Documents/GitHub/Assignment-6/Assignment 6/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>D:/Software/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
