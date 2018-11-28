@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Checkpoint
+  - booster
+  - death
   layers:
   - Default
   - TransparentFX

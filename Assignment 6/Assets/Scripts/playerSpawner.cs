@@ -18,7 +18,7 @@ public class playerSpawner : MonoBehaviour {
 	//pause script variables
 	//public static bool GameIsPaused = false;
 	//public GameObject pauseMenuUI;
-
+	public GameObject exitCanvas;
 	public float Playersfinish;
 	[HideInInspector]
 	public float timer;
@@ -34,7 +34,7 @@ public class playerSpawner : MonoBehaviour {
 	public bool paused2 = false;
 	public bool paused3 = false;
 	public bool paused4 = false;
-	public bool additiveSceneLoaded = false;
+	public bool buttonOnScreen = false;
 
 	//public int setPlayerNumber;
 	// Use this for initialization
@@ -139,9 +139,9 @@ public class playerSpawner : MonoBehaviour {
 
 	public void Resume ()
 	{
-		if (additiveSceneLoaded) {
-			SceneManager.UnloadSceneAsync("PauseMenu");
-			additiveSceneLoaded = false;
+		if (buttonOnScreen) {
+			exitCanvas.gameObject.SetActive (false);
+			buttonOnScreen = false;
 		}
 		pauseMenuUI1.SetActive (false);
 		pauseMenuUI2.SetActive (false);
@@ -153,9 +153,12 @@ public class playerSpawner : MonoBehaviour {
 
 	public void Pause ()
 	{
-		if (!additiveSceneLoaded) {
-			SceneManager.LoadScene("PauseMenu", LoadSceneMode.Additive);
-			additiveSceneLoaded = true;
+		if (Input.GetKeyDown(KeyCode.Backspace)) {
+				SceneManager.LoadScene ("MainMenu");
+		}
+		if (!buttonOnScreen) {
+			exitCanvas.gameObject.SetActive (true);
+			buttonOnScreen = true;
 		}
 		if (paused1) {
 			pauseMenuUI1.SetActive (true);
@@ -182,13 +185,13 @@ public class playerSpawner : MonoBehaviour {
 
 	public void MenuReturn (float timermax)
 	{
-		Debug.Log ("Returning to Menu...");
+		Debug.Log ("Victory screen then returning to Menu...");
 		timer += Time.deltaTime;
 		AC.Animation();
 		if(timer > timermax)
 		{
 
-			SceneManager.LoadScene("MainMenu");	
+			SceneManager.LoadScene("Victory");	
 		}
 	}
 }

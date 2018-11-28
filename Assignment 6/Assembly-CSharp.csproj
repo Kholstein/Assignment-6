@@ -55,8 +55,11 @@
   <ItemGroup>
      <Compile Include="Assets\Scenes\DebugTeleport.cs" />
      <Compile Include="Assets\Scripts\animateScene.cs" />
+     <Compile Include="Assets\Scripts\boostScript.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Controllercheck.cs" />
      <Compile Include="Assets\Scripts\CreditsManager.cs" />
+     <Compile Include="Assets\Scripts\GetPlayerName.cs" />
      <Compile Include="Assets\Scripts\HighScoreList.cs" />
      <Compile Include="Assets\Scripts\HighScoresManager.cs" />
      <Compile Include="Assets\Scripts\LapTimeManager.cs" />
@@ -65,6 +68,8 @@
      <Compile Include="Assets\Scripts\mainMenuAnimation.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\playerSpawner.cs" />
+     <Compile Include="Assets\Scripts\quitGame.cs" />
+     <Compile Include="Assets\Scripts\Victory.cs" />
      <Compile Include="Assets\Scripts\Zach&apos;s Scripts\powerUpList.cs" />
      <Compile Include="Assets\Scripts\Zach&apos;s Scripts\powerUpPickUp.cs" />
      <Compile Include="Assets\Scripts\Zach&apos;s Scripts\powerUps.cs" />
