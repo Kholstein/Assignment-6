@@ -216,7 +216,6 @@ GameObject:
   - component: {fileID: 3047060}
   - component: {fileID: 3047062}
   - component: {fileID: 3047061}
-  - component: {fileID: 3047063}
   m_Layer: 0
   m_Name: Crusher
   m_TagString: Untagged
@@ -281,20 +280,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 3047059}
-  m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &3047063
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 3047059}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &9959608
 GameObject:
@@ -437,7 +422,6 @@ GameObject:
   - component: {fileID: 23591242}
   - component: {fileID: 23591244}
   - component: {fileID: 23591243}
-  - component: {fileID: 23591245}
   m_Layer: 0
   m_Name: Piston
   m_TagString: Untagged
@@ -502,20 +486,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 23591241}
-  m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &23591245
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 23591241}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &24127390
 GameObject:
@@ -5012,6 +4982,48 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300008, guid: 58378a5ef7a21644a96b672af1dac550, type: 3}
+--- !u!1001 &125797618
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4555236366318696, guid: ab5922a63a0841f43be9447353ac6129, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.24419382
+      objectReference: {fileID: 0}
+    - target: {fileID: 4555236366318696, guid: ab5922a63a0841f43be9447353ac6129, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.39558968
+      objectReference: {fileID: 0}
+    - target: {fileID: 4555236366318696, guid: ab5922a63a0841f43be9447353ac6129, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 47.758858
+      objectReference: {fileID: 0}
+    - target: {fileID: 4555236366318696, guid: ab5922a63a0841f43be9447353ac6129, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4555236366318696, guid: ab5922a63a0841f43be9447353ac6129, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4555236366318696, guid: ab5922a63a0841f43be9447353ac6129, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4555236366318696, guid: ab5922a63a0841f43be9447353ac6129, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4555236366318696, guid: ab5922a63a0841f43be9447353ac6129, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ab5922a63a0841f43be9447353ac6129, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &126062211
 GameObject:
   m_ObjectHideFlags: 0
@@ -7601,7 +7613,6 @@ GameObject:
   - component: {fileID: 197115479}
   - component: {fileID: 197115481}
   - component: {fileID: 197115480}
-  - component: {fileID: 197115482}
   m_Layer: 0
   m_Name: Crusher
   m_TagString: Untagged
@@ -7666,20 +7677,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 197115478}
-  m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &197115482
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 197115478}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &199235616
 GameObject:
@@ -12022,7 +12019,6 @@ GameObject:
   - component: {fileID: 309696428}
   - component: {fileID: 309696430}
   - component: {fileID: 309696429}
-  - component: {fileID: 309696431}
   m_Layer: 0
   m_Name: Piston
   m_TagString: Untagged
@@ -12087,20 +12083,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 309696427}
-  m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &309696431
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 309696427}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &309913973
 GameObject:
@@ -13785,7 +13767,6 @@ GameObject:
   - component: {fileID: 346447990}
   - component: {fileID: 346447992}
   - component: {fileID: 346447991}
-  - component: {fileID: 346447993}
   m_Layer: 0
   m_Name: Piston
   m_TagString: Untagged
@@ -13850,20 +13831,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 346447989}
-  m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &346447993
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 346447989}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &349850350
 GameObject:
@@ -13968,7 +13935,6 @@ GameObject:
   - component: {fileID: 350526794}
   - component: {fileID: 350526796}
   - component: {fileID: 350526795}
-  - component: {fileID: 350526797}
   m_Layer: 0
   m_Name: Crusher
   m_TagString: Untagged
@@ -14033,20 +13999,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 350526793}
-  m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &350526797
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 350526793}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &353634104
 GameObject:
@@ -15317,7 +15269,6 @@ GameObject:
   - component: {fileID: 398950723}
   - component: {fileID: 398950725}
   - component: {fileID: 398950724}
-  - component: {fileID: 398950726}
   m_Layer: 0
   m_Name: Crusher
   m_TagString: Untagged
@@ -15382,20 +15333,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 398950722}
-  m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &398950726
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 398950722}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &400732318
 GameObject:
@@ -18434,7 +18371,6 @@ GameObject:
   - component: {fileID: 454510564}
   - component: {fileID: 454510566}
   - component: {fileID: 454510565}
-  - component: {fileID: 454510567}
   m_Layer: 0
   m_Name: Crusher
   m_TagString: Untagged
@@ -18499,20 +18435,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 454510563}
-  m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &454510567
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 454510563}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &454802766
 GameObject:
@@ -20339,7 +20261,6 @@ GameObject:
   - component: {fileID: 487485864}
   - component: {fileID: 487485866}
   - component: {fileID: 487485865}
-  - component: {fileID: 487485867}
   m_Layer: 0
   m_Name: Crusher
   m_TagString: Untagged
@@ -20404,20 +20325,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 487485863}
-  m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &487485867
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 487485863}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &489503870
 GameObject:
@@ -22659,7 +22566,6 @@ GameObject:
   - component: {fileID: 553132068}
   - component: {fileID: 553132070}
   - component: {fileID: 553132069}
-  - component: {fileID: 553132071}
   m_Layer: 0
   m_Name: Piston
   m_TagString: Untagged
@@ -22724,20 +22630,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 553132067}
-  m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &553132071
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 553132067}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &553213928
 GameObject:
@@ -23052,7 +22944,7 @@ Transform:
   - {fileID: 1900167075}
   - {fileID: 1363209599}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &556534533
 Prefab:
@@ -23091,7 +22983,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4849850330917398, guid: 6db054c904f1ae743b22864aa7d9221c, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4169024259019346, guid: 6db054c904f1ae743b22864aa7d9221c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -31109,7 +31001,6 @@ GameObject:
   - component: {fileID: 719829782}
   - component: {fileID: 719829784}
   - component: {fileID: 719829783}
-  - component: {fileID: 719829785}
   m_Layer: 0
   m_Name: Crusher
   m_TagString: Untagged
@@ -31174,20 +31065,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 719829781}
-  m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &719829785
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 719829781}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &719871438
 GameObject:
@@ -31475,7 +31352,6 @@ GameObject:
   - component: {fileID: 730343447}
   - component: {fileID: 730343449}
   - component: {fileID: 730343448}
-  - component: {fileID: 730343450}
   m_Layer: 0
   m_Name: Piston
   m_TagString: Untagged
@@ -31540,20 +31416,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 730343446}
-  m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &730343450
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 730343446}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &732088607
 GameObject:
@@ -34830,7 +34692,6 @@ GameObject:
   - component: {fileID: 825969510}
   - component: {fileID: 825969512}
   - component: {fileID: 825969511}
-  - component: {fileID: 825969513}
   m_Layer: 0
   m_Name: Piston
   m_TagString: Untagged
@@ -34895,20 +34756,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 825969509}
-  m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &825969513
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 825969509}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &826243190
 GameObject:
@@ -36829,7 +36676,6 @@ GameObject:
   - component: {fileID: 863151619}
   - component: {fileID: 863151621}
   - component: {fileID: 863151620}
-  - component: {fileID: 863151622}
   m_Layer: 0
   m_Name: Piston
   m_TagString: Untagged
@@ -36894,20 +36740,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 863151618}
-  m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &863151622
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 863151618}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &863916624
 GameObject:
@@ -37630,7 +37462,6 @@ GameObject:
   - component: {fileID: 874709818}
   - component: {fileID: 874709820}
   - component: {fileID: 874709819}
-  - component: {fileID: 874709821}
   m_Layer: 0
   m_Name: Crusher
   m_TagString: Untagged
@@ -37695,20 +37526,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 874709817}
-  m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &874709821
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 874709817}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &874849921
 GameObject:
@@ -38274,7 +38091,6 @@ GameObject:
   - component: {fileID: 891427162}
   - component: {fileID: 891427164}
   - component: {fileID: 891427163}
-  - component: {fileID: 891427165}
   m_Layer: 0
   m_Name: Piston
   m_TagString: Untagged
@@ -38340,20 +38156,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 891427161}
   m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &891427165
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 891427161}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &904646728
 GameObject:
   m_ObjectHideFlags: 0
@@ -38365,7 +38167,6 @@ GameObject:
   - component: {fileID: 904646729}
   - component: {fileID: 904646731}
   - component: {fileID: 904646730}
-  - component: {fileID: 904646732}
   m_Layer: 0
   m_Name: Piston
   m_TagString: Untagged
@@ -38430,20 +38231,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 904646728}
-  m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &904646732
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 904646728}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &911462406
 GameObject:
@@ -39848,7 +39635,6 @@ GameObject:
   - component: {fileID: 941636033}
   - component: {fileID: 941636035}
   - component: {fileID: 941636034}
-  - component: {fileID: 941636036}
   m_Layer: 0
   m_Name: Crusher
   m_TagString: Untagged
@@ -39913,20 +39699,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 941636032}
-  m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &941636036
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 941636032}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &942046671
 GameObject:
@@ -40842,7 +40614,7 @@ Transform:
   m_Children:
   - {fileID: 1361716669}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &960975146
 GameObject:
@@ -41871,7 +41643,6 @@ GameObject:
   - component: {fileID: 987266677}
   - component: {fileID: 987266679}
   - component: {fileID: 987266678}
-  - component: {fileID: 987266680}
   m_Layer: 0
   m_Name: Piston
   m_TagString: Untagged
@@ -41936,20 +41707,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 987266676}
-  m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &987266680
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 987266676}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &988588490
 GameObject:
@@ -42631,7 +42388,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4403705158432484, guid: d85356e51fc87594cbffe7a3f2128d70, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114747187535757090, guid: d85356e51fc87594cbffe7a3f2128d70,
         type: 2}
@@ -43403,7 +43160,6 @@ GameObject:
   - component: {fileID: 1008020957}
   - component: {fileID: 1008020959}
   - component: {fileID: 1008020958}
-  - component: {fileID: 1008020960}
   m_Layer: 0
   m_Name: Piston
   m_TagString: Untagged
@@ -43468,20 +43224,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1008020956}
-  m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &1008020960
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1008020956}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &1012206803
 GameObject:
@@ -46604,7 +46346,6 @@ GameObject:
   - component: {fileID: 1081152160}
   - component: {fileID: 1081152162}
   - component: {fileID: 1081152161}
-  - component: {fileID: 1081152163}
   m_Layer: 0
   m_Name: Piston
   m_TagString: Untagged
@@ -46669,20 +46410,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1081152159}
-  m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &1081152163
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1081152159}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &1081184390
 GameObject:
@@ -52752,7 +52479,6 @@ GameObject:
   - component: {fileID: 1221223352}
   - component: {fileID: 1221223354}
   - component: {fileID: 1221223353}
-  - component: {fileID: 1221223355}
   m_Layer: 0
   m_Name: Crusher
   m_TagString: Untagged
@@ -52817,20 +52543,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1221223351}
-  m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &1221223355
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1221223351}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &1221608560
 GameObject:
@@ -55185,7 +54897,6 @@ GameObject:
   - component: {fileID: 1278995244}
   - component: {fileID: 1278995246}
   - component: {fileID: 1278995245}
-  - component: {fileID: 1278995247}
   m_Layer: 0
   m_Name: Crusher
   m_TagString: Untagged
@@ -55250,20 +54961,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1278995243}
-  m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &1278995247
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1278995243}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &1280691956
 GameObject:
@@ -55736,7 +55433,6 @@ GameObject:
   - component: {fileID: 1290744792}
   - component: {fileID: 1290744794}
   - component: {fileID: 1290744793}
-  - component: {fileID: 1290744795}
   m_Layer: 0
   m_Name: Piston
   m_TagString: Untagged
@@ -55801,20 +55497,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1290744791}
-  m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &1290744795
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1290744791}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &1293813356
 GameObject:
@@ -57447,7 +57129,7 @@ Transform:
   m_LocalScale: {x: 30, y: 1, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1317447306
 GameObject:
@@ -59078,7 +58760,6 @@ GameObject:
   - component: {fileID: 1351639881}
   - component: {fileID: 1351639883}
   - component: {fileID: 1351639882}
-  - component: {fileID: 1351639884}
   m_Layer: 0
   m_Name: Piston
   m_TagString: Untagged
@@ -59143,20 +58824,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1351639880}
-  m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &1351639884
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1351639880}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &1354379463
 GameObject:
@@ -59444,7 +59111,6 @@ GameObject:
   - component: {fileID: 1358341707}
   - component: {fileID: 1358341709}
   - component: {fileID: 1358341708}
-  - component: {fileID: 1358341710}
   m_Layer: 0
   m_Name: Crusher
   m_TagString: Untagged
@@ -59509,20 +59175,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1358341706}
-  m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &1358341710
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1358341706}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &1359339687
 GameObject:
@@ -59881,7 +59533,6 @@ GameObject:
   - component: {fileID: 1363688417}
   - component: {fileID: 1363688419}
   - component: {fileID: 1363688418}
-  - component: {fileID: 1363688420}
   m_Layer: 0
   m_Name: Piston
   m_TagString: Untagged
@@ -59946,20 +59597,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1363688416}
-  m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &1363688420
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1363688416}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &1365979263
 GameObject:
@@ -66420,7 +66057,6 @@ GameObject:
   - component: {fileID: 1483753909}
   - component: {fileID: 1483753911}
   - component: {fileID: 1483753910}
-  - component: {fileID: 1483753912}
   m_Layer: 0
   m_Name: Crusher
   m_TagString: Untagged
@@ -66485,20 +66121,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1483753908}
-  m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &1483753912
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1483753908}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &1490826145
 GameObject:
@@ -69850,7 +69472,6 @@ GameObject:
   - component: {fileID: 1562693123}
   - component: {fileID: 1562693125}
   - component: {fileID: 1562693124}
-  - component: {fileID: 1562693126}
   m_Layer: 0
   m_Name: Piston
   m_TagString: Untagged
@@ -69915,20 +69536,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1562693122}
-  m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &1562693126
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1562693122}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1001 &1563410639
 Prefab:
@@ -72129,7 +71736,6 @@ GameObject:
   - component: {fileID: 1607042684}
   - component: {fileID: 1607042686}
   - component: {fileID: 1607042685}
-  - component: {fileID: 1607042687}
   m_Layer: 0
   m_Name: Crusher
   m_TagString: Untagged
@@ -72194,20 +71800,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1607042683}
-  m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &1607042687
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1607042683}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &1610003983
 GameObject:
@@ -74328,7 +73920,7 @@ Transform:
   - {fileID: 1420296474}
   - {fileID: 1058816671}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1663382034
 GameObject:
@@ -74341,7 +73933,6 @@ GameObject:
   - component: {fileID: 1663382035}
   - component: {fileID: 1663382037}
   - component: {fileID: 1663382036}
-  - component: {fileID: 1663382038}
   m_Layer: 0
   m_Name: Crusher
   m_TagString: Untagged
@@ -74406,20 +73997,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1663382034}
-  m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &1663382038
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1663382034}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &1666580443
 GameObject:
@@ -78019,7 +77596,6 @@ GameObject:
   - component: {fileID: 1770111045}
   - component: {fileID: 1770111047}
   - component: {fileID: 1770111046}
-  - component: {fileID: 1770111048}
   m_Layer: 0
   m_Name: Crusher
   m_TagString: Untagged
@@ -78084,20 +77660,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1770111044}
-  m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &1770111048
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1770111044}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &1770807316
 GameObject:
@@ -78217,7 +77779,6 @@ GameObject:
   - component: {fileID: 1772225475}
   - component: {fileID: 1772225477}
   - component: {fileID: 1772225476}
-  - component: {fileID: 1772225478}
   m_Layer: 0
   m_Name: Crusher
   m_TagString: Untagged
@@ -78282,20 +77843,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1772225474}
-  m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &1772225478
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1772225474}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &1773325364
 GameObject:
@@ -78799,7 +78346,6 @@ GameObject:
   - component: {fileID: 1784611541}
   - component: {fileID: 1784611543}
   - component: {fileID: 1784611542}
-  - component: {fileID: 1784611544}
   m_Layer: 0
   m_Name: Piston
   m_TagString: Untagged
@@ -78864,20 +78410,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1784611540}
-  m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &1784611544
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1784611540}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &1785238815
 GameObject:
@@ -82128,7 +81660,6 @@ GameObject:
   - component: {fileID: 1845720483}
   - component: {fileID: 1845720485}
   - component: {fileID: 1845720484}
-  - component: {fileID: 1845720486}
   m_Layer: 0
   m_Name: Crusher
   m_TagString: Untagged
@@ -82193,20 +81724,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1845720482}
-  m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &1845720486
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1845720482}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &1845791764
 GameObject:
@@ -82428,7 +81945,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ebcd18ce6123e8c4cba264d7509f4bcb, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ebcd18ce6123e8c4cba264d7509f4bcb, type: 3}
       propertyPath: m_LocalScale.x
@@ -85555,7 +85072,6 @@ GameObject:
   - component: {fileID: 1928156578}
   - component: {fileID: 1928156580}
   - component: {fileID: 1928156579}
-  - component: {fileID: 1928156581}
   m_Layer: 0
   m_Name: Piston
   m_TagString: Untagged
@@ -85620,20 +85136,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1928156577}
-  m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &1928156581
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1928156577}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &1932863966
 GameObject:
@@ -89897,7 +89399,6 @@ GameObject:
   - component: {fileID: 2015194404}
   - component: {fileID: 2015194406}
   - component: {fileID: 2015194405}
-  - component: {fileID: 2015194407}
   m_Layer: 0
   m_Name: Crusher
   m_TagString: Untagged
@@ -89962,20 +89463,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2015194403}
-  m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &2015194407
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2015194403}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &2016014832
 GameObject:
@@ -92959,7 +92446,6 @@ GameObject:
   - component: {fileID: 2081861439}
   - component: {fileID: 2081861441}
   - component: {fileID: 2081861440}
-  - component: {fileID: 2081861442}
   m_Layer: 0
   m_Name: Piston
   m_TagString: Untagged
@@ -93024,20 +92510,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2081861438}
-  m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &2081861442
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2081861438}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &2082723412
 GameObject:
@@ -94630,7 +94102,6 @@ GameObject:
   - component: {fileID: 2117296334}
   - component: {fileID: 2117296336}
   - component: {fileID: 2117296335}
-  - component: {fileID: 2117296337}
   m_Layer: 0
   m_Name: Crusher
   m_TagString: Untagged
@@ -94695,20 +94166,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2117296333}
-  m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &2117296337
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2117296333}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
 --- !u!1 &2117601100
 GameObject:
@@ -96284,7 +95741,6 @@ GameObject:
   - component: {fileID: 2146402739}
   - component: {fileID: 2146402741}
   - component: {fileID: 2146402740}
-  - component: {fileID: 2146402742}
   m_Layer: 0
   m_Name: Piston
   m_TagString: Untagged
@@ -96349,18 +95805,4 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2146402738}
-  m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}
---- !u!64 &2146402742
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2146402738}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: d081069720f7a8146b02fd54c63e9412, type: 3}

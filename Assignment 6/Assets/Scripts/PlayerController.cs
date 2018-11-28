@@ -319,7 +319,7 @@ public class PlayerController : MonoBehaviour {
 	void OnCollisionEnter (Collision col)
 	{
 		//if not already in a fail state
-		if (col.relativeVelocity.magnitude > 8 & col.gameObject.tag != "Track")
+		if (col.relativeVelocity.magnitude > 10 & col.gameObject.tag != "Track")
 		{
 			CurrentState = 2;
 		}
