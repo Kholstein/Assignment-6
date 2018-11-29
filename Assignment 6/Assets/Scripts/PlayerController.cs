@@ -1,8 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
+	public int boostValue;
+	public GameObject booster;
+	public Material material1;
+	public Material material2;
+	public Material material3;
+	public Material material4;
+
+	
+	public float bearBoosterDuration = 5f; // How long the bearBooster powerup lasts
+	public float playerHealth = 100f; // This is a placeholder for the player's health. Delete after a system has been created.
+
+	public int boostSpeed = 1;
+
+	bool thorns = true; // used to activate the thorns powerup. Set to 'true' as a testing placeholder.
+	public GameObject DestructableObject; // What object will be destroyed by the thorns powerup
+
+	GameObject firePrefab; // What is fired when the 'fire' powerup is used.
+
+	// public AudioClip fireShootSound; // Play a sound when the 'fire' powerup is used.
+	// private AudioSource soundOrigin; // What audioSource will be used for the 'fire' powerup. This is just for ease of use.
 
 	//Audio
 	public AudioSource audioSource;
@@ -63,19 +84,26 @@ public class PlayerController : MonoBehaviour {
 	public GameObject[] CPlist;
 
 	private Vector3 Checkpointpos;
-	[HideInInspector]
+	//[HideInInspector]
 
-	//Finsih the game
-	//public bool Finish;
+	//Finish the game
+	public bool Finish = false;
 
 	//detect race finish
 	public bool finishRace = false;
 	public int finishCount = 1;
 	public static int finishNumber;
 
+	public LapTimeManager LTM;
+
+	private playerSpawner PS;
+
+	public float timer;
+
 	void Awake()
 	{
 		CPlist = GameObject.FindGameObjectsWithTag ("Checkpoint");
+		PS = GameObject.Find("playerManager").GetComponent<playerSpawner>();
 	}
 	void Start ()
 	{
@@ -105,7 +133,7 @@ public class PlayerController : MonoBehaviour {
 			//Camera playerCam = GetComponentInChildren<Camera> ();
 		}
 		if (finishNumber == 4) {
-			Invoke ("setNextScene", 5);
+			//Invoke ("setNextScene", 5);
 			//setNextScene ();
 		}
 
@@ -133,62 +161,79 @@ public class PlayerController : MonoBehaviour {
 				//currentCamTransform = currentCam.gameObject.transform.rotation.eulerAngles;
 			if (playNumb == 1)
 			{
+				this.gameObject.GetComponent<MeshRenderer> ().material = material1;
 				if (Input.GetAxis ("P1_Drift") > 0)
 				{
 					if (driftDelay < 1) {
 						speed = driftBoost;
 						driftDelay = 1;
-						rb.AddForce (-MoveVector * 300);
+						//rb.AddForce (-MoveVector * 300);
+						rb.drag = 1f;
+						rb.angularDrag = 1f;
 					}
 				} else {
 					//move player
 					Move ();
-					speed = 10f;
+					rb.drag = 0.5f;
+					rb.angularDrag = 0.5f;
+					speed = 15f;
 				}
 			}
 			if (playNumb == 2)
 			{
+				this.gameObject.GetComponent<MeshRenderer> ().material = material2;
 				if (Input.GetAxis ("P2_Drift") > 0)
 				{
 					if (driftDelay < 1) {
 						speed = driftBoost;
 						driftDelay = 1;
-						rb.AddForce (-MoveVector * 300);
+						rb.drag = 1f;
+						rb.angularDrag = 1f;
 					}
 				} else {
 					//move player
 					Move ();
-					speed = 10f;
+					rb.drag = 0.5f;
+					rb.angularDrag = 0.5f;
+					speed = 15f;
 				}
 			}
 			if (playNumb == 3)
 			{
+				this.gameObject.GetComponent<MeshRenderer> ().material = material3;
 				if (Input.GetAxis ("P3_Drift") > 0)
 				{
 					if (driftDelay < 1) {
 						speed = driftBoost;
 						driftDelay = 1;
-						rb.AddForce (-MoveVector * 300);
+						rb.drag = 1f;
+						rb.angularDrag = 1f;
 					}
 				} else {
 					//move player
 					Move ();
-					speed = 10f;
+					rb.drag = 0.5f;
+					rb.angularDrag = 0.5f;
+					speed = 15f;
 				}
 			}
 			if (playNumb == 4)
 			{
+				this.gameObject.GetComponent<MeshRenderer> ().material = material4;
 				if (Input.GetAxis ("P4_Drift") > 0)
 				{
 					if (driftDelay < 1) {
 						speed = driftBoost;
 						driftDelay = 1;
-						rb.AddForce (-MoveVector * 300);
+						rb.drag = 1f;
+						rb.angularDrag = 1f;
 					}
 				} else {
 					//move player
 					Move ();
-					speed = 10f;
+					rb.drag = 0.5f;
+					rb.angularDrag = 0.5f;
+					speed = 15f;
 				}
 			}
 		}
@@ -262,11 +307,22 @@ public class PlayerController : MonoBehaviour {
 			finishNumber = finishCount;
 			finishCount++;
 		}
+		if (other.gameObject.CompareTag ("death")) {
+			transform.position = Checkpointpos;
+		}
+//		if (other.gameObject.CompareTag ("booster")) {
+//			booster = GameObject.FindGameObjectWithTag ("booster");
+//			rb.AddForce(booster.transform.forward * boostValue, ForceMode.Impulse);
+//		}
 	}
 
 	void OnCollisionEnter (Collision col)
 	{
 		//if not already in a fail state
+		if (col.relativeVelocity.magnitude > 10 & col.gameObject.tag != "Track")
+		{
+			CurrentState = 2;
+		}
 		if (col.gameObject.name == "FailTrigger")
 		{
 			if (CurrentState == 1 && WinFail != -1) {
@@ -294,16 +350,39 @@ public class PlayerController : MonoBehaviour {
 
 	void PlayerHealth()
 	{
-		if (transform.position.y <= -10) {
-			transform.position = Checkpointpos;
+		if (CurrentState == 2) 
+		{
+			timer += Time.deltaTime;
+			CurrentState = 2;
+			if(timer > 5)
+			{
+				transform.position = Checkpointpos;
+				CurrentState = 1;
+				timer = 0;
+			}
 		}
 
 		for (int i = 0; i < CPlist.Length; i++) {
 			if (Vector3.Distance (transform.position, CPlist [i].transform.position) < 5) {
 				Checkpointpos = CPlist [i].transform.position;
 			}
-			if (Vector3.Distance (transform.position, CPlist [CPlist.Length - 1].transform.position) < 5) {
-				//Finish = true;
+			if (Vector3.Distance (transform.position, CPlist [CPlist.Length - 1].transform.position) < 5 & CurrentState != 2) {
+				if (Victory.firstPlace == 0) {
+					Victory.firstPlace = playNumb;
+					//DontDestroyOnLoad (this.gameObject);
+				}
+				else if (Victory.secondPlace == 0) {
+					Victory.secondPlace = playNumb;
+					//DontDestroyOnLoad (this.gameObject);
+				}
+				else if (Victory.thirdPlace == 0) {
+					Victory.thirdPlace = playNumb;
+					//DontDestroyOnLoad (this.gameObject);
+				}
+				Finish = true;
+				LTM.lapComplete = true;
+				PS.Playersfinish -= 1;
+				CurrentState = 2;
 			}
 		}
 	}
