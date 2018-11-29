@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 6dfb4bbc5ed2b58488bc274227a50e0e
+  - enabled: 1
+    path: Assets/Scenes/failureFactory.unity
+    guid: b3002fe6333a1d44e9987a48251fb607
+  - enabled: 1
+    path: Assets/Scenes/Deaths Quarry.unity
+    guid: b08dcbaf0704ce342b5b1691db34dce1
+  - enabled: 1
+    path: Assets/Scenes/Debug.unity
+    guid: a23956b352bb3704a96eb920402278f0
+  - enabled: 1
+    path: Assets/Scenes/sapphireSands.unity
+    guid: af9fc95aae7b6c74f8a4a90c4d49b627
+  - enabled: 1
+    path: Assets/Scenes/PauseMenu.unity
+    guid: 50387b594ad896144bb4be2e1bdeb6d5
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: 7395d01b279a0a34a8af5cda27544115
+  m_configObjects: {}
