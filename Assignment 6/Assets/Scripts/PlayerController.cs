@@ -350,7 +350,7 @@ public class PlayerController : MonoBehaviour {
 
 	void PlayerHealth()
 	{
-		if (CurrentState == 2) 
+		if (CurrentState == 2 & !Finish) 
 		{
 			timer += Time.deltaTime;
 			CurrentState = 2;
@@ -366,7 +366,7 @@ public class PlayerController : MonoBehaviour {
 			if (Vector3.Distance (transform.position, CPlist [i].transform.position) < 5) {
 				Checkpointpos = CPlist [i].transform.position;
 			}
-			if (Vector3.Distance (transform.position, CPlist [CPlist.Length - 1].transform.position) < 5 & CurrentState != 2) {
+			if (Vector3.Distance (transform.position, GameObject.Find("FinishLine").transform.position) < 5 & CurrentState != 2) {
 				if (Victory.firstPlace == 0) {
 					Victory.firstPlace = playNumb;
 					//DontDestroyOnLoad (this.gameObject);
