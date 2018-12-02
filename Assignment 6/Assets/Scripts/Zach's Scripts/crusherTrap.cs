@@ -1,16 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+public class crusherTrap : MonoBehaviour
+{
+    public Transform StopPoint;
+    private Vector3 StartPoint;
+    private Vector3 StopPosition;
+    public float UpDownLoopTime = 5f;
 
-public class crusherTrap : MonoBehaviour {
+    public Transform respawnPoint;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    void Start()
+    {
+        StartPoint = transform.position;
+        StopPosition = StopPoint.position;
+    }
+
+    void Update()
+    {
+        transform.position = Vector3.Lerp(StartPoint, StopPosition, Mathf.SmoothStep(0f, 1f, Mathf.PingPong(Time.time / UpDownLoopTime, 1f)));
+    }
+
+    private void OnTriggerEnter(Collider player)
+    {
+        player.transform.position = respawnPoint.transform.position;
+    }
 }

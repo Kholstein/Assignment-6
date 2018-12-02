@@ -8,7 +8,6 @@ public class lavaTrapScript: MonoBehaviour
     public AudioClip SoundToPlay;
     AudioSource audio;
 
-    [SerializeField] private Transform player;
     [SerializeField] private Transform respawnPoint;
 
     void OnTriggerEnter(Collider player) // When a player collides...
