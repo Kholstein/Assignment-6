@@ -13,7 +13,7 @@ public class playerSpawner : MonoBehaviour {
 	private int camNumber = 0;
 	private int countCamNumber = 1;
 	private int setCamNumCount= 0;
-	public int playerCount = 4;
+	public static int playerCount = 4;
 	public GameObject[] PlayerCount;
 	//pause script variables
 	//public static bool GameIsPaused = false;

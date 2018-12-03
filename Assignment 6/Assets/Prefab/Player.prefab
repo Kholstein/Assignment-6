@@ -501,6 +501,7 @@ MonoBehaviour:
   material2: {fileID: 2100000, guid: 467d601c17a66324c9e72aa3f0c4eb32, type: 2}
   material3: {fileID: 2100000, guid: b1c3f296b787e5545b6d82f5a712ceee, type: 2}
   material4: {fileID: 2100000, guid: 4bca486c38f12fa4e826c11be49b60ec, type: 2}
+  currentCheckpointInt: 0
   bearBoosterDuration: 5
   playerHealth: 100
   boostSpeed: 1
