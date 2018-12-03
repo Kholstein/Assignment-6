@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour {
 	public Material material2;
 	public Material material3;
 	public Material material4;
-	public int currentCheckpointInt;
 	Collider playerCollider;
 	
 	public float bearBoosterDuration = 5f; // How long the bearBooster powerup lasts
@@ -301,36 +300,41 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter(Collider other) {
+		if (other.gameObject.CompareTag ("finishTrigger")) {
+			finishRace = true;
+		}
 		if (other.gameObject.CompareTag("Finish")) {
-			if (Victory.firstPlace == 0) {
-				Victory.firstPlace = playNumb;
-				//DontDestroyOnLoad (this.gameObject);
-			}
-			else if (Victory.secondPlace == 0) {
-				Victory.secondPlace = playNumb;
-				//DontDestroyOnLoad (this.gameObject);
-			}
-			else if (Victory.thirdPlace == 0) {
-				Victory.thirdPlace = playNumb;
-				//DontDestroyOnLoad (this.gameObject);
-			}
-			else if (Victory.fourthPlace == 0) {
-				Victory.fourthPlace = playNumb;
-				//DontDestroyOnLoad (this.gameObject);
-			}
-			playerCollider = GetComponent<Collider> ();
-			playerCollider.enabled = false;
-			ren.enabled = false;
-			LTM.lapComplete = true;
-			PS.Playersfinish -= 1;
-			Finish = true;
+			if (finishRace) {
+				if (Victory.firstPlace == 0) {
+					Victory.firstPlace = playNumb;
+					//DontDestroyOnLoad (this.gameObject);
+				}
+				else if (Victory.secondPlace == 0) {
+					Victory.secondPlace = playNumb;
+					//DontDestroyOnLoad (this.gameObject);
+				}
+				else if (Victory.thirdPlace == 0) {
+					Victory.thirdPlace = playNumb;
+					//DontDestroyOnLoad (this.gameObject);
+				}
+				else if (Victory.fourthPlace == 0) {
+					Victory.fourthPlace = playNumb;
+					//DontDestroyOnLoad (this.gameObject);
+				}
+				playerCollider = GetComponent<Collider> ();
+				playerCollider.enabled = false;
+				ren.enabled = false;
+				LTM.lapComplete = true;
+				PS.Playersfinish -= 1;
+				Finish = true;
 
 
-//			//Move to the victory box
-//			this.gameObject.transform.position = new Vector3 (100, 0, 20);
-//			finishRace = true;
-//			finishNumber = finishCount;
-//			finishCount++;
+//				//Move to the victory box
+//				this.gameObject.transform.position = new Vector3 (100, 0, 20);
+//				finishRace = true;
+//				finishNumber = finishCount;
+//				finishCount++;
+			}
 		}
 		if (other.gameObject.CompareTag ("death")) {
 			transform.position = Checkpointpos;
