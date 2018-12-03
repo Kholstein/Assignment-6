@@ -36,12 +36,17 @@ public class playerSpawner : MonoBehaviour {
 	public bool paused4 = false;
 	public bool buttonOnScreen = false;
 
+    // Canvas for the player for name entered
+    private LapTimeManager[] playerCanvas;
+
 	//public int setPlayerNumber;
 	// Use this for initialization
 	void Start () {
 		spawnPlayers ();
 		PlayerCount = GameObject.FindGameObjectsWithTag("Player");
 		Playersfinish = PlayerCount.Length;
+
+        //playerCanvas = player.gameObject.transform.GetChild(0).GetChild(0).gameObject;
 	}
 
 	void Update ()
@@ -95,11 +100,16 @@ public class playerSpawner : MonoBehaviour {
 
 	void spawnPlayers ()
 	{
-
-		for (int i = 1; i <= playerCount; i++) {
+        // create an array for all of the player canvases
+        playerCanvas = new LapTimeManager[4];
+        for (int i = 1; i <= playerCount; i++) {
 			GameObject spawnedChild = Instantiate (player, spawnPoints [countPlayer].position, spawnPoints [countPlayer].rotation);
 			Camera childCam = spawnedChild.GetComponentInChildren<Camera> ();
-			countPlayer++;
+            
+            // get the canvas from the spawned players
+            playerCanvas[i - 1] = spawnedChild.transform.GetChild(0).GetChild(0).GetComponent<LapTimeManager>();
+
+            countPlayer++;
 			if (i == 1) {
 				//childCam.gameObject.tag = "camera1";
 				childCam.rect = new Rect (0.0f, 0.5f, 0.5f, 0.5f);
@@ -185,13 +195,37 @@ public class playerSpawner : MonoBehaviour {
 
 	public void MenuReturn (float timermax)
 	{
-		Debug.Log ("Victory screen then returning to Menu...");
-		timer += Time.deltaTime;
-		AC.Animation();
-		if(timer > timermax)
-		{
+        // check to see if each player with a new high score has entered their name
+        int nextScene = 0;
+        for (int i = 1; i <= playerCount; i++)
+        {
+            if (playerCanvas[i - 1].nameEntered == true)
+            {
+                nextScene++;
+            }
+        }
 
-			SceneManager.LoadScene("Victory");	
-		}
-	}
+        // go to next scene if all players have entered their name for a new high score
+        if (nextScene == 4)
+        {
+            Debug.Log("Victory screen then returning to Menu...");
+            timer += Time.deltaTime;
+            AC.Animation();
+            if (timer > timermax)
+            {
+                SceneManager.LoadScene("Victory");
+            }
+        }
+        //if(lapTimeManager.nameEntered == true)
+        //{
+        //    Debug.Log("Victory screen then returning to Menu...");
+        //    timer += Time.deltaTime;
+        //    AC.Animation();
+        //    if (timer > timermax)
+        //    {
+        //        SceneManager.LoadScene("Victory");
+        //    }
+        //}
+
+    }
 }

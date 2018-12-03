@@ -350,7 +350,7 @@ public class PlayerController : MonoBehaviour {
 
 	void PlayerHealth()
 	{
-		if (CurrentState == 2) 
+		if (CurrentState == 2 && !Finish) 
 		{
 			timer += Time.deltaTime;
 			CurrentState = 2;

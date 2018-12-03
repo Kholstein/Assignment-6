@@ -42435,6 +42435,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114747187535757090, guid: d85356e51fc87594cbffe7a3f2128d70,
+        type: 2}
+      propertyPath: lapTimeManager
+      value: 
+      objectReference: {fileID: 2034328471}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d85356e51fc87594cbffe7a3f2128d70, type: 2}
   m_IsPrefabAsset: 0
@@ -90283,6 +90288,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b7ee781449229342a9eec2a892ea569, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &2034328471 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114246550671227394, guid: 6b7ee781449229342a9eec2a892ea569,
+    type: 2}
+  m_PrefabInternal: {fileID: 2034328470}
+  m_Script: {fileID: 11500000, guid: b6de8240710f9374ebb81c5ead9330c6, type: 3}
 --- !u!1001 &2034741779
 Prefab:
   m_ObjectHideFlags: 0
