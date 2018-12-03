@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/khols/Desktop/Classes/CSCC classes/3D graphics game engines/assignment 6/Assignment-6/builds/test 1/Losing My Marblesn - Metal Apocalypse.exe
+C:/Users/Michael/Documents/GitHub/Assignment-6/Build Week 4 Assignment Week 13/Losing My Marblesn - Metal Apocalypse.exe
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/failureFactory.unity
@@ -188,4 +188,3 @@ e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 9318334b30e9f195f573b2ce00154b95 Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 5c1e676cbd136c49cade5897b8fca8ba Assembly-CSharp.dll:.Controllercheck
 93307bd34e39d73fd24e00ec39c25a91 Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
-f896a4c1e4ad712594f529af4d0566a4 Assembly-CSharp.dll:.ScrollingMat
