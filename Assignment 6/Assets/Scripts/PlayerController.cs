@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
 	public Material material3;
 	public Material material4;
 	Collider playerCollider;
+	public static float startRotation;
 	
 	public float bearBoosterDuration = 5f; // How long the bearBooster powerup lasts
 	public float playerHealth = 100f; // This is a placeholder for the player's health. Delete after a system has been created.
@@ -111,7 +112,7 @@ public class PlayerController : MonoBehaviour {
 		GameObject manager = GameObject.Find ("playerManager");
 		playerSpawner playerSpawn = manager.GetComponent<playerSpawner> ();
 		playNumb = playerSpawn.setPlayerNumber ();
-
+//		this.gameObject.transform.rotation = Quaternion.Euler((new Vector3(0,startRotation,0)));
 		//get componets
 		rb = GetComponent<Rigidbody>();
 		ren = GetComponent<Renderer> ();
@@ -348,7 +349,7 @@ public class PlayerController : MonoBehaviour {
 	void OnCollisionEnter (Collision col)
 	{
 		//if not already in a fail state
-		if (col.relativeVelocity.magnitude > 10 & col.gameObject.tag != "Track")
+		if (col.relativeVelocity.magnitude > 15 & col.gameObject.tag != "Track")
 		{
 			CurrentState = 2;
 		}
@@ -385,7 +386,7 @@ public class PlayerController : MonoBehaviour {
 			CurrentState = 2;
 			if(timer > 5)
 			{
-				transform.position = Checkpointpos;
+				//transform.position = Checkpointpos;
 				CurrentState = 1;
 				timer = 0;
 			}

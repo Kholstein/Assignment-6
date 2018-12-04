@@ -22,6 +22,7 @@ public class playerSpawner : MonoBehaviour {
 	public float Playersfinish;
 	[HideInInspector]
 	public float timer;
+	public float controllerStartRotation;
 
 	public animateScene AC;
 
@@ -95,6 +96,7 @@ public class playerSpawner : MonoBehaviour {
 
 	void spawnPlayers ()
 	{
+		CameraController.editCameraRotation = controllerStartRotation;
 
 		for (int i = 1; i <= playerCount; i++) {
 			GameObject spawnedChild = Instantiate (player, spawnPoints [countPlayer].position, spawnPoints [countPlayer].rotation);

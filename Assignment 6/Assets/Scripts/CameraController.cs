@@ -31,12 +31,13 @@ public class CameraController : MonoBehaviour {
 	//sensativity of movement
 	private float sensivityX = 4f;
 	private float sensivitY = 1f;
+	public static float editCameraRotation;
 
 	private void Start()
 	{
 		camTransform = transform;
 		//cam = Camera.main;
-
+		currentX = editCameraRotation;
 		//referencing the player manager
 		GameObject manager = GameObject.Find ("playerManager");
 		playerSpawner playerSpawn = manager.GetComponent<playerSpawner> ();
@@ -59,7 +60,7 @@ public class CameraController : MonoBehaviour {
 		if (camNumb == 1)
 		{
 			//update X position -- Keyboard/Joystick
-			currentX += Input.GetAxis ("P1_Horizontal");
+			currentX += (Input.GetAxis ("P1_Horizontal"));
 		}
 		else if(camNumb == 2)
 		{
