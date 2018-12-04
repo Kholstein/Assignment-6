@@ -11,9 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 6dfb4bbc5ed2b58488bc274227a50e0e
-  - enabled: 1
-    path: Assets/Scenes/failureFactory.unity
-    guid: b3002fe6333a1d44e9987a48251fb607
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Deaths Quarry.unity
     guid: b08dcbaf0704ce342b5b1691db34dce1

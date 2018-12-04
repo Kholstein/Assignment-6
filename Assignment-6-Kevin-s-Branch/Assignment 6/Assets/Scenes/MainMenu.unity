@@ -398,6 +398,7 @@ GameObject:
   - component: {fileID: 208452862}
   - component: {fileID: 208452861}
   - component: {fileID: 208452860}
+  - component: {fileID: 208452864}
   m_Layer: 5
   m_Name: Control Canvas
   m_TagString: Untagged
@@ -434,12 +435,12 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -487,6 +488,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &208452864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 208452859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00799dceb7889b8439b76e8c5726196e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XboxControls: {fileID: 1004337434}
+  KeyboardControls: {fileID: 1182861668}
 --- !u!1 &222305981
 GameObject:
   m_ObjectHideFlags: 0
@@ -3626,7 +3640,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1182861669
 Transform:
   m_ObjectHideFlags: 0
