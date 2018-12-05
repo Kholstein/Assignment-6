@@ -39,7 +39,7 @@ public class playerSpawner : MonoBehaviour {
 
 
 	// Canvas for the player for name entered
-	public LapTimeManager[] playerCanvas;
+	private LapTimeManager[] playerCanvas;
 
 	//public int setPlayerNumber;
 	// Use this for initialization
@@ -101,11 +101,17 @@ public class playerSpawner : MonoBehaviour {
 	void spawnPlayers ()
 	{
 		CameraController.editCameraRotation = controllerStartRotation;
+		//create an array for all of the player canvases
+		playerCanvas = new LapTimeManager[4];
 
 		for (int i = 1; i <= playerCount; i++) {
 			GameObject spawnedChild = Instantiate (player, spawnPoints [countPlayer].position, spawnPoints [countPlayer].rotation);
 			Camera childCam = spawnedChild.GetComponentInChildren<Camera> ();
+			//get the canvas from the spawned players
+			playerCanvas[i - 1] = spawnedChild.transform.GetChild(0).GetChild(0).GetComponent<LapTimeManager>();
+
 			countPlayer++;
+
 			if (i == 1) {
 				//childCam.gameObject.tag = "camera1";
 				childCam.rect = new Rect (0.0f, 0.5f, 0.5f, 0.5f);
@@ -202,7 +208,7 @@ public class playerSpawner : MonoBehaviour {
 		}
 
 		// go to next scene if all players have entered their name for a new high score
-		if (nextScene == 4)
+		if (nextScene == playerCount)
 		{
 			Debug.Log("Victory screen then returning to Menu...");
 			timer += Time.deltaTime;
