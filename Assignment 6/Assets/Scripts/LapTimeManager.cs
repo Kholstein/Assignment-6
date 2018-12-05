@@ -130,7 +130,7 @@ public class LapTimeManager : MonoBehaviour
                         ChangeHighScore5(lapTime, playerName);
                     }
 
-                    //nameEntered = true;
+                    nameEntered = true;
                 }
             }
         }

@@ -37,6 +37,10 @@ public class playerSpawner : MonoBehaviour {
 	public bool paused4 = false;
 	public bool buttonOnScreen = false;
 
+
+	// Canvas for the player for name entered
+	public LapTimeManager[] playerCanvas;
+
 	//public int setPlayerNumber;
 	// Use this for initialization
 	void Start () {
@@ -185,15 +189,28 @@ public class playerSpawner : MonoBehaviour {
 		Time.timeScale = 0f;
 	}
 
-	public void MenuReturn (float timermax)
+	public void MenuReturn(float timermax)
 	{
-		Debug.Log ("Victory screen then returning to Menu...");
-		timer += Time.deltaTime;
-		AC.Animation();
-		if(timer > timermax)
+		// check to see if each player with a new high score has entered their name
+		int nextScene = 0;
+		for (int i = 1; i <= playerCount; i++)
 		{
+			if (playerCanvas[i - 1].nameEntered == true)
+			{
+				nextScene++;
+			}
+		}
 
-			SceneManager.LoadScene("Victory");	
+		// go to next scene if all players have entered their name for a new high score
+		if (nextScene == 4)
+		{
+			Debug.Log("Victory screen then returning to Menu...");
+			timer += Time.deltaTime;
+			AC.Animation();
+			if (timer > timermax)
+			{
+				SceneManager.LoadScene("Victory");
+			}
 		}
 	}
 }

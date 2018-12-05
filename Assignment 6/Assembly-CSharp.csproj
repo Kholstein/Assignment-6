@@ -69,11 +69,16 @@
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\playerSpawner.cs" />
      <Compile Include="Assets\Scripts\quitGame.cs" />
+     <Compile Include="Assets\Scripts\ScrollingMat.cs" />
      <Compile Include="Assets\Scripts\setPlayerCount.cs" />
      <Compile Include="Assets\Scripts\Victory.cs" />
+     <Compile Include="Assets\Scripts\Zach&apos;s Scripts\crusherTrap.cs" />
+     <Compile Include="Assets\Scripts\Zach&apos;s Scripts\lavaTrapScript.cs" />
+     <Compile Include="Assets\Scripts\Zach&apos;s Scripts\powerupInstantiate.cs" />
      <Compile Include="Assets\Scripts\Zach&apos;s Scripts\powerUpList.cs" />
      <Compile Include="Assets\Scripts\Zach&apos;s Scripts\powerUpPickUp.cs" />
      <Compile Include="Assets\Scripts\Zach&apos;s Scripts\powerUps.cs" />
+     <Compile Include="Assets\Scripts\Zach&apos;s Scripts\spikeTrap.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Michael/Documents/GitHub/Assignment-6/Assignment 6/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
