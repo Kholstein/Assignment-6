@@ -89,52 +89,54 @@ public class LapTimeManager : MonoBehaviour
         }
         else
         {
-            if (nameEntered == false)
-            {
-                if (lapTime < oldTime5)
-                {
-                    //gameController.playerNameMenu.SetActive(true);
-                    //playerName = input_name.GetComponent<InputField>().text;
+			if (nameEntered == false)
+			{
+				if (lapTime < oldTime5)
+				{
 					playerNameMenu.SetActive(true);
 					playerName = getPlayerName.playerName;
-                    //playerName = "Name";
-                    //gameController.highScoreMenu.SetActive(true);
+					//playerName = "Name";
 
-                    if (lapTime < oldTime4)
-                    {
-                        if (lapTime < oldTime3)
-                        {
-                            if (lapTime < oldTime2)
-                            {
-                                if (lapTime < oldTime1)
-                                {
-                                    ChangeHighScore1(lapTime, playerName);
-                                }
-                                else
-                                {
-                                    ChangeHighScore2(lapTime, playerName);
-                                }
-                            }
-                            else
-                            {
-                                ChangeHighScore3(lapTime, playerName);
-                            }
-                        }
-                        else
-                        {
-                            ChangeHighScore4(lapTime, playerName);
-                        }
-                    }
-                    else
-                    {
-                        ChangeHighScore5(lapTime, playerName);
-                    }
+					if (lapTime < oldTime4)
+					{
+						if (lapTime < oldTime3)
+						{
+							if (lapTime < oldTime2)
+							{
+								if (lapTime < oldTime1)
+								{
+									ChangeHighScore1(lapTime, playerName);
+								}
+								else
+								{
+									ChangeHighScore2(lapTime, playerName);
+								}
+							}
+							else
+							{
+								ChangeHighScore3(lapTime, playerName);
+							}
+						}
+						else
+						{
+							ChangeHighScore4(lapTime, playerName);
+						}
+					}
+					else
+					{
+						ChangeHighScore5(lapTime, playerName);
+					}
+				}
+				else
+				{
+					nameEntered = true;
+				}
 
-                    //nameEntered = true;
-                }
-            }
-        }
-    }
+			}
+            
+		}
+        
+	}
 
     public string FormatLapTime(float lapTimer)
     {

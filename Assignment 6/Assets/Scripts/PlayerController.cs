@@ -10,7 +10,8 @@ public class PlayerController : MonoBehaviour {
 	public Material material2;
 	public Material material3;
 	public Material material4;
-
+	Collider playerCollider;
+	public static float startRotation;
 	
 	public float bearBoosterDuration = 5f; // How long the bearBooster powerup lasts
 	public float playerHealth = 100f; // This is a placeholder for the player's health. Delete after a system has been created.
@@ -111,7 +112,7 @@ public class PlayerController : MonoBehaviour {
 		GameObject manager = GameObject.Find ("playerManager");
 		playerSpawner playerSpawn = manager.GetComponent<playerSpawner> ();
 		playNumb = playerSpawn.setPlayerNumber ();
-
+//		this.gameObject.transform.rotation = Quaternion.Euler((new Vector3(0,startRotation,0)));
 		//get componets
 		rb = GetComponent<Rigidbody>();
 		ren = GetComponent<Renderer> ();
@@ -126,16 +127,15 @@ public class PlayerController : MonoBehaviour {
 
 	private void FixedUpdate()
 	{
-		if (finishRace) {
+		if (Finish) {
 			CurrentState = 0;
-			//Invoke ("setNextScene", 5);
-			//this.gameObject.SetActive (false);
-			//Camera playerCam = GetComponentInChildren<Camera> ();
+//			Invoke ("setNextScene", 5);
+//			Camera playerCam = GetComponentInChildren<Camera> ();
 		}
-		if (finishNumber == 4) {
-			//Invoke ("setNextScene", 5);
-			//setNextScene ();
-		}
+//		if (finishNumber == 4) {
+//			Invoke ("setNextScene", 5);
+//			setNextScene ();
+//		}
 
 		if (driftDelay >= 1) {
 			if (driftDelay > 70) {
@@ -157,8 +157,8 @@ public class PlayerController : MonoBehaviour {
 				//rotate the move vector
 				MoveVector = RotateWithView ();
 				//simple drift mechanic
-				//currentCam = this.gameObject.GetComponentInChildren<Camera>();
-				//currentCamTransform = currentCam.gameObject.transform.rotation.eulerAngles;
+//				currentCam = this.gameObject.GetComponentInChildren<Camera>();
+//				currentCamTransform = currentCam.gameObject.transform.rotation.eulerAngles;
 			if (playNumb == 1)
 			{
 				this.gameObject.GetComponent<MeshRenderer> ().material = material1;
@@ -242,10 +242,10 @@ public class PlayerController : MonoBehaviour {
 			//do nothing
 		}
 
-		//if(Finish)
-		{
-			// DebugText.text = "Race Finished";
-		}
+//		if(Finish)
+//		{
+//			DebugText.text = "Race Finished";
+//		}
 	}
 
 	private void Move()
@@ -256,10 +256,9 @@ public class PlayerController : MonoBehaviour {
 
 	private Vector3 PoolInput()
 	{
+		Vector3 dir = Vector3.zero;
 
-			Vector3 dir = Vector3.zero;
-
-			//dir.x = Input.GetAxis ("Horizontal");
+//			dir.x = Input.GetAxis ("Horizontal");
 		if (playNumb == 1)
 		{
 			dir.y = Input.GetAxis ("P1_Vertical");
@@ -302,10 +301,41 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter(Collider other) {
-		if (other.gameObject.CompareTag("Finish")) {
+		if (other.gameObject.CompareTag ("finishTrigger")) {
 			finishRace = true;
-			finishNumber = finishCount;
-			finishCount++;
+		}
+		if (other.gameObject.CompareTag("Finish")) {
+			if (finishRace) {
+				if (Victory.firstPlace == 0) {
+					Victory.firstPlace = playNumb;
+					//DontDestroyOnLoad (this.gameObject);
+				}
+				else if (Victory.secondPlace == 0) {
+					Victory.secondPlace = playNumb;
+					//DontDestroyOnLoad (this.gameObject);
+				}
+				else if (Victory.thirdPlace == 0) {
+					Victory.thirdPlace = playNumb;
+					//DontDestroyOnLoad (this.gameObject);
+				}
+				else if (Victory.fourthPlace == 0) {
+					Victory.fourthPlace = playNumb;
+					//DontDestroyOnLoad (this.gameObject);
+				}
+				playerCollider = GetComponent<Collider> ();
+				playerCollider.enabled = false;
+				ren.enabled = false;
+				LTM.lapComplete = true;
+				PS.Playersfinish -= 1;
+				Finish = true;
+
+
+//				//Move to the victory box
+//				this.gameObject.transform.position = new Vector3 (100, 0, 20);
+//				finishRace = true;
+//				finishNumber = finishCount;
+//				finishCount++;
+			}
 		}
 		if (other.gameObject.CompareTag ("death")) {
 			transform.position = Checkpointpos;
@@ -319,7 +349,7 @@ public class PlayerController : MonoBehaviour {
 	void OnCollisionEnter (Collision col)
 	{
 		//if not already in a fail state
-		if (col.relativeVelocity.magnitude > 10 & col.gameObject.tag != "Track")
+		if (col.relativeVelocity.magnitude > 15 & col.gameObject.tag != "Track")
 		{
 			CurrentState = 2;
 		}
@@ -356,7 +386,7 @@ public class PlayerController : MonoBehaviour {
 			CurrentState = 2;
 			if(timer > 5)
 			{
-				transform.position = Checkpointpos;
+				//transform.position = Checkpointpos;
 				CurrentState = 1;
 				timer = 0;
 			}
@@ -366,24 +396,28 @@ public class PlayerController : MonoBehaviour {
 			if (Vector3.Distance (transform.position, CPlist [i].transform.position) < 5) {
 				Checkpointpos = CPlist [i].transform.position;
 			}
-			if (Vector3.Distance (transform.position, CPlist [CPlist.Length - 1].transform.position) < 5 & CurrentState != 2) {
-				if (Victory.firstPlace == 0) {
-					Victory.firstPlace = playNumb;
-					//DontDestroyOnLoad (this.gameObject);
-				}
-				else if (Victory.secondPlace == 0) {
-					Victory.secondPlace = playNumb;
-					//DontDestroyOnLoad (this.gameObject);
-				}
-				else if (Victory.thirdPlace == 0) {
-					Victory.thirdPlace = playNumb;
-					//DontDestroyOnLoad (this.gameObject);
-				}
-				Finish = true;
-				LTM.lapComplete = true;
-				PS.Playersfinish -= 1;
-				CurrentState = 2;
-			}
+//			if (Vector3.Distance (transform.position, CPlist [CPlist.Length - 1].transform.position) < 5 & CurrentState != 2) {
+//				if (Victory.firstPlace == 0) {
+//					Victory.firstPlace = playNumb;
+//					//DontDestroyOnLoad (this.gameObject);
+//				}
+//				else if (Victory.secondPlace == 0) {
+//					Victory.secondPlace = playNumb;
+//					//DontDestroyOnLoad (this.gameObject);
+//				}
+//				else if (Victory.thirdPlace == 0) {
+//					Victory.thirdPlace = playNumb;
+//					//DontDestroyOnLoad (this.gameObject);
+//				}
+//				else if (Victory.fourthPlace == 0) {
+//					Victory.fourthPlace = playNumb;
+//					//DontDestroyOnLoad (this.gameObject);
+//				}
+//				Finish = true;
+//				LTM.lapComplete = true;
+//				PS.Playersfinish -= 1;
+//				CurrentState = 2;
+//			}
 		}
 	}
 }
