@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Scenes/Death's Quarry.unity
+  isLoaded: 1
+  isActive: 1
