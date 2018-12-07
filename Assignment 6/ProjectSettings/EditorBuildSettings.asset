@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/failureFactory.unity
     guid: b3002fe6333a1d44e9987a48251fb607
   - enabled: 1
-    path: Assets/Scenes/Deaths Quarry.unity
+    path: Assets/Scenes/Debug Death's Quarry.unity
     guid: b08dcbaf0704ce342b5b1691db34dce1
   - enabled: 1
     path: Assets/Scenes/Debug.unity
@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Victory.unity
     guid: 7395d01b279a0a34a8af5cda27544115
+  - enabled: 1
+    path: Assets/Scenes/Death's Quarry.unity
+    guid: d746ef71016ff6d4b819d90a46d779b4
   m_configObjects: {}

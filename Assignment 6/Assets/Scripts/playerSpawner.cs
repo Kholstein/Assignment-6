@@ -13,7 +13,7 @@ public class playerSpawner : MonoBehaviour {
 	private int camNumber = 0;
 	private int countCamNumber = 1;
 	private int setCamNumCount= 0;
-	public int playerCount = 4;
+	public static int playerCount = 4;
 	public GameObject[] PlayerCount;
 	//pause script variables
 	//public static bool GameIsPaused = false;
@@ -22,6 +22,7 @@ public class playerSpawner : MonoBehaviour {
 	public float Playersfinish;
 	[HideInInspector]
 	public float timer;
+	public float controllerStartRotation;
 
 	public animateScene AC;
 
@@ -35,6 +36,10 @@ public class playerSpawner : MonoBehaviour {
 	public bool paused3 = false;
 	public bool paused4 = false;
 	public bool buttonOnScreen = false;
+
+
+	// Canvas for the player for name entered
+	private LapTimeManager[] playerCanvas;
 
 	//public int setPlayerNumber;
 	// Use this for initialization
@@ -95,11 +100,18 @@ public class playerSpawner : MonoBehaviour {
 
 	void spawnPlayers ()
 	{
+		CameraController.editCameraRotation = controllerStartRotation;
+		//create an array for all of the player canvases
+		playerCanvas = new LapTimeManager[4];
 
 		for (int i = 1; i <= playerCount; i++) {
 			GameObject spawnedChild = Instantiate (player, spawnPoints [countPlayer].position, spawnPoints [countPlayer].rotation);
 			Camera childCam = spawnedChild.GetComponentInChildren<Camera> ();
+			//get the canvas from the spawned players
+			playerCanvas[i - 1] = spawnedChild.transform.GetChild(0).GetChild(0).GetComponent<LapTimeManager>();
+
 			countPlayer++;
+
 			if (i == 1) {
 				//childCam.gameObject.tag = "camera1";
 				childCam.rect = new Rect (0.0f, 0.5f, 0.5f, 0.5f);
@@ -183,15 +195,28 @@ public class playerSpawner : MonoBehaviour {
 		Time.timeScale = 0f;
 	}
 
-	public void MenuReturn (float timermax)
+	public void MenuReturn(float timermax)
 	{
-		Debug.Log ("Victory screen then returning to Menu...");
-		timer += Time.deltaTime;
-		AC.Animation();
-		if(timer > timermax)
+		// check to see if each player with a new high score has entered their name
+		int nextScene = 0;
+		for (int i = 1; i <= playerCount; i++)
 		{
+			if (playerCanvas[i - 1].nameEntered == true)
+			{
+				nextScene++;
+			}
+		}
 
-			SceneManager.LoadScene("Victory");	
+		// go to next scene if all players have entered their name for a new high score
+		if (nextScene == playerCount)
+		{
+			Debug.Log("Victory screen then returning to Menu...");
+			timer += Time.deltaTime;
+			AC.Animation();
+			if (timer > timermax)
+			{
+				SceneManager.LoadScene("Victory");
+			}
 		}
 	}
 }
