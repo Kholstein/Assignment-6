@@ -17,4 +17,16 @@ public class mainMenuAnimation : MonoBehaviour {
 	public void playCreditsBackAnimation() {
 		anim.SetTrigger ("BackButtonCredits");
 	}
+	public void playStartAnimation() {
+		anim.SetTrigger ("StartButton");
+	}
+	public void playStartBackAnimation() {
+		anim.SetTrigger ("BackButtonStart");
+	}
+	public void playControlsAnimation() {
+		anim.SetTrigger ("ControlsButton");
+	}
+	public void playControlsBackAnimation() {
+		anim.SetTrigger ("BackButtonControls");
+	}
 }

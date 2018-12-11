@@ -351,7 +351,8 @@ public class PlayerController : MonoBehaviour {
 		//if not already in a fail state
 		if (col.relativeVelocity.magnitude > 15 & col.gameObject.tag != "Track")
 		{
-			CurrentState = 2;
+//			rb.AddForce (-MoveVector * 300);
+//			CurrentState = 2;
 		}
 		if (col.gameObject.name == "FailTrigger")
 		{

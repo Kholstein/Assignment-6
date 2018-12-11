@@ -12,7 +12,7 @@ public class LoadHighScores : MonoBehaviour
     //public Text HighscoreText;
 
     public string factoryLevel = "failureFactory";
-    public string quarryLevel = "Deaths Quarry";
+    public string quarryLevel = "Hectic Highway";
 
     void Awake()
     {
