@@ -14,9 +14,7 @@ ModelImporter:
     400006: LableMesh
     400008: TurnerMesh
     2100000: BodyTexture
-    2100002: lambert1
-    2100004: GlassTextureClear
-    2100006: Lable_Texture
+    2100002: GlassTextureClear
     2300000: BodyMesh
     2300002: BowlMesh
     2300004: LableMesh

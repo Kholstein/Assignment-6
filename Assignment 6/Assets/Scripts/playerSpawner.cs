@@ -13,7 +13,7 @@ public class playerSpawner : MonoBehaviour {
 	private int camNumber = 0;
 	private int countCamNumber = 1;
 	private int setCamNumCount= 0;
-	public static int playerCount = 4;
+	public static int playerCount = 1;
 	public GameObject[] PlayerCount;
 	//pause script variables
 	//public static bool GameIsPaused = false;
@@ -23,6 +23,10 @@ public class playerSpawner : MonoBehaviour {
 	[HideInInspector]
 	public float timer;
 	public float controllerStartRotation;
+	public float screenWidth = 1.0f;
+	public float screenLength = 1.0f;
+	public float posOne = 0.5f;
+	public float posTwo = 0.5f;
 
 	public animateScene AC;
 
@@ -100,6 +104,18 @@ public class playerSpawner : MonoBehaviour {
 
 	void spawnPlayers ()
 	{
+		if (playerCount == 1) {
+			posOne = 0.0f;
+		}
+		if (playerCount == 2) {
+			posTwo = 0.0f;
+			screenLength = 0.5f;
+		}
+		if (playerCount > 2) {
+			screenWidth = 0.5f;
+			screenLength = 0.5f;
+		}
+
 		CameraController.editCameraRotation = controllerStartRotation;
 		//create an array for all of the player canvases
 		playerCanvas = new LapTimeManager[4];
@@ -112,13 +128,14 @@ public class playerSpawner : MonoBehaviour {
 
 			countPlayer++;
 
+
 			if (i == 1) {
 				//childCam.gameObject.tag = "camera1";
-				childCam.rect = new Rect (0.0f, 0.5f, 0.5f, 0.5f);
+				childCam.rect = new Rect (0.0f, posOne, screenWidth, screenLength);
 			}
 			else if (i == 2) {
 				//childCam.gameObject.tag = "camera2";
-				childCam.rect = new Rect (0.5f, 0.5f, 0.5f, 0.5f);
+				childCam.rect = new Rect (posTwo, posTwo, screenWidth, screenLength);
 			}
 			else if (i == 3) {
 				//childCam.gameObject.tag = "camera3";

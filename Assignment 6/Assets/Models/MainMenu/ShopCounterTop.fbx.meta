@@ -5,10 +5,10 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: lambert1
+    2100000: CounterTopTexture
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Shop_Top
+    4300000: pCube1
   externalObjects: {}
   materials:
     importMaterials: 1

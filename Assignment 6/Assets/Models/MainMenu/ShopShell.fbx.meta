@@ -5,14 +5,14 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Wall_Texture
-    2100002: lambert1
-    2100004: Floor_Texture
-    2100006: Glass_Texture
-    2100008: Frame_Texture
+    2100000: Frame_Texture
+    2100002: Wall_Texture
+    2100004: Ceiling_Texture
+    2100006: Floor_Texture
+    2100008: Glass_Texture
     2300000: //RootNode
     3300000: //RootNode
-    4300000: ShopShell
+    4300000: Shop_Shell
   externalObjects: {}
   materials:
     importMaterials: 1
